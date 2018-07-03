@@ -1417,6 +1417,106 @@
     "groupTitle": "Crud"
   },
   {
+    "type": "GET",
+    "url": "/apis/v1/crud/company",
+    "title": "表Company",
+    "name": "Db_Company",
+    "group": "Database",
+    "version": "1.0.0",
+    "contentType": "application/json",
+    "parameter": {
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n _id,\n status, //状态，默认为0：未审核，1：审核通过，2：审核不通过\n phone, //联系手机，同时也是登录手机\n desc, //暂不用，以后可以用来添加子定义信息\n deviceCount, //设备数量，应该由系统定期查询device表更新\n driverCount, //司机数量，应该由系统定期查询user表更新\n name, // 公司名称\n type, // 公司类型\n contact, // 联系人\n region, // 所在区域\n credit // 信用编码\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "src/mongo/Schemas.js",
+    "groupTitle": "Database",
+    "sampleRequest": [
+      {
+        "url": "http://api.smartgreenai.com:32363/apis/v1/crud/company"
+      }
+    ]
+  },
+  {
+    "type": "GET",
+    "url": "/apis/v1/crud/device",
+    "title": "表Device",
+    "name": "Db_Device",
+    "group": "Database",
+    "version": "1.0.0",
+    "contentType": "application/json",
+    "parameter": {
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n _id, //设备序列号，个人用户扫描添加，企业用户由管理员绑定进来\n manufacture, // 生产厂商名字\n desc,\n status, //状态，0:默认可用，1：不可用，具体含义待定\n vehicle, //车牌号，也是车辆信息表ID\n company, // 公司ID\n user, // 司机ID，是用户表ID\n setting, //设置的内容\n imei,\n imsi,\n telephone //设备电话号码与imsi对应\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "src/mongo/Schemas.js",
+    "groupTitle": "Database",
+    "sampleRequest": [
+      {
+        "url": "http://api.smartgreenai.com:32363/apis/v1/crud/device"
+      }
+    ]
+  },
+  {
+    "type": "GET",
+    "url": "/apis/v1/crud/user",
+    "title": "表User",
+    "name": "Db_User",
+    "group": "Database",
+    "version": "1.0.0",
+    "contentType": "application/json",
+    "parameter": {
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n _id,\n username, // 用户名\n phone, // 手机号\n password,\n status, // 状态，默认0\n desc,\n company, // 公司ID\n name, // 姓名\n avatar, // 头像\n sos:{\n   contacts:[{name, phone}], // 紧急联系人姓名和电话\n   sms:'mod1', //消息模板\n   on:true/false //是否开启紧急报警\n },\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "src/mongo/Schemas.js",
+    "groupTitle": "Database",
+    "sampleRequest": [
+      {
+        "url": "http://api.smartgreenai.com:32363/apis/v1/crud/user"
+      }
+    ]
+  },
+  {
+    "type": "GET",
+    "url": "/apis/v1/crud/vehicle",
+    "title": "表Vehicle",
+    "name": "Db_Vehicle",
+    "group": "Database",
+    "version": "1.0.0",
+    "contentType": "application/json",
+    "parameter": {
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n _id, //车牌号\n status, //状态，默认0\n type, // 车辆类型：小客车，大客车，化危车辆\n desc: {\n   power, //动力类型\n   weightTotal, // 总重量\n   weightSchedule, //额定重量\n   length, //车长度\n   height, //车高度\n   axleCount //车轴数量\n },\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "src/mongo/Schemas.js",
+    "groupTitle": "Database",
+    "sampleRequest": [
+      {
+        "url": "http://api.smartgreenai.com:32363/apis/v1/crud/vehicle"
+      }
+    ]
+  },
+  {
     "type": "POST",
     "url": "/apis/v1/rest/:model",
     "title": "创建一条记录",
