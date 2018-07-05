@@ -1503,7 +1503,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Request-Example:",
-          "content": "{\n _id, //车牌号\n status, //状态，默认0\n type, // 车辆类型：小客车，大客车，化危车辆\n desc: {\n   power, //动力类型\n   weightTotal, // 总重量\n   weightSchedule, //额定重量\n   length, //车长度\n   height, //车高度\n   axleCount //车轴数量\n },\n}",
+          "content": "{\n _id, //车牌号\n status, //状态，默认0\n type, // 车辆类型：小客车，大客车，化危车辆\n desc: {\n   power, //动力类型\n   weightTotal, // 总重量\n   weightSchedule, //额定重量\n   length, //车长度\n   width, //车宽度\n   height, //车高度\n   axleCount //车轴数量\n },\n}",
           "type": "json"
         }
       ]
@@ -1890,6 +1890,86 @@ define({ "api": [
     "sampleRequest": [
       {
         "url": "http://api.smartgreenai.com:32363/apis/v1/utils/binding"
+      }
+    ]
+  },
+  {
+    "type": "POST",
+    "url": "/apis/v1/utils/bindingV2",
+    "title": "设备绑定V2",
+    "description": "<p><code>Content-Type=&quot;application/json&quot;</code>，同功能URL：<code>/apis/v1/utils/binding_noauth</code></p>",
+    "name": "bindingV2",
+    "group": "Utils",
+    "version": "1.0.0",
+    "contentType": "application/json",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "_id",
+            "defaultValue": "123456789012345",
+            "description": "<p>Mandatory 设备序列号，即device表主键.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "json",
+            "optional": false,
+            "field": "vehicle",
+            "defaultValue": "{_id:\"京A12345\",type,desc:{power,weightTotal,weightSchedule,length,width,height,axleCount}}",
+            "description": "<p>Mandatory 车牌号，vehicle表主键.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "user",
+            "defaultValue": "5b210fea77c0a27c84c0ea23",
+            "description": "<p>Mandatory 绑定的用户_id，user表主键.可从Authorization中获得，binding_noauth接口需要此字段</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n _id:\"123456789012345\",\n vehicle:{\n   _id:\"京A12345\",\n   type:\"车辆类型：小客车，大客车，化危车辆\",\n   desc: {\n     power, //动力类型\n     weightTotal, // 总重量\n     weightSchedule, //额定重量\n     length, //车长度\n     width, //车宽度\n     height, //车高度\n     axleCount //车轴数量\n   }\n }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "errcode",
+            "defaultValue": "0",
+            "description": "<p>result of operation, 0 when success.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "errcode",
+            "description": "<p>!=0</p>"
+          }
+        ]
+      }
+    },
+    "filename": "src/apis/apiUtils.js",
+    "groupTitle": "Utils",
+    "sampleRequest": [
+      {
+        "url": "http://api.smartgreenai.com:32363/apis/v1/utils/bindingV2"
       }
     ]
   }
