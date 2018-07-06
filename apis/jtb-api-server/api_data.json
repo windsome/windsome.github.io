@@ -217,7 +217,7 @@
   {
     "type": "POST",
     "url": "/apis/v1/auth/forget",
-    "title": "密码重设",
+    "title": "密码重置",
     "description": "<p><code>Content-Type=&quot;application/json&quot;</code> 忘记密码后通过手机号/验证码重新设置</p>",
     "name": "forget",
     "group": "Auth",
@@ -352,6 +352,70 @@
     "sampleRequest": [
       {
         "url": "http://api.smartgreenai.com:32363/apis/v1/auth/changephone/get_sms_code"
+      }
+    ]
+  },
+  {
+    "type": "POST",
+    "url": "/apis/v1/auth/forget/get_sms_code",
+    "title": "密码重置-获取手机验证码",
+    "description": "<p><code>Content-Type=&quot;application/json&quot;</code> 忘记密码后通过手机号/验证码重新设置</p>",
+    "name": "getSmsCodeForget",
+    "group": "Auth",
+    "version": "1.0.0",
+    "contentType": "application/json",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "phone",
+            "defaultValue": "13661989491",
+            "description": "<p>Mandatory phone.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n phone:\"13661989491\",\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "errcode",
+            "defaultValue": "0",
+            "description": "<p>result of operation, 0 when success.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "errcode",
+            "description": "<p>!=0</p>"
+          }
+        ]
+      }
+    },
+    "filename": "src/apis/apiAuth.js",
+    "groupTitle": "Auth",
+    "sampleRequest": [
+      {
+        "url": "http://api.smartgreenai.com:32363/apis/v1/auth/forget/get_sms_code"
       }
     ]
   },
