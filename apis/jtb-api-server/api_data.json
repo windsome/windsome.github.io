@@ -1972,5 +1972,120 @@
         "url": "http://api.smartgreenai.com:32363/apis/v1/utils/bindingV2"
       }
     ]
+  },
+  {
+    "type": "GET",
+    "url": "/apis/v1/utils/mydevice",
+    "title": "设备绑定列表",
+    "description": "<p><code>Content-Type=&quot;application/json&quot;</code> 我的设备列表，需要登录</p>",
+    "name": "mydevice",
+    "group": "Utils",
+    "version": "1.0.0",
+    "contentType": "application/json",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "errcode",
+            "defaultValue": "0",
+            "description": "<p>result of operation, 0 when success.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "errcode",
+            "description": "<p>!=0</p>"
+          }
+        ]
+      }
+    },
+    "filename": "src/apis/apiUtils.js",
+    "groupTitle": "Utils",
+    "sampleRequest": [
+      {
+        "url": "http://api.smartgreenai.com:32363/apis/v1/utils/mydevice"
+      }
+    ]
+  },
+  {
+    "type": "POST",
+    "url": "/apis/v1/utils/unbinding",
+    "title": "设备解绑",
+    "description": "<p><code>Content-Type=&quot;application/json&quot;</code>，同功能URL：<code>/apis/v1/utils/unbinding_noauth</code></p>",
+    "name": "unbinding",
+    "group": "Utils",
+    "version": "1.0.0",
+    "contentType": "application/json",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "_id",
+            "defaultValue": "123456789012345",
+            "description": "<p>Mandatory 设备序列号，即device表主键.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "user",
+            "defaultValue": "5b210fea77c0a27c84c0ea23",
+            "description": "<p>Optional 绑定的用户_id，user表主键.binding_noauth接口需要此字段</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n _id:\"123456789012345\",\n //user:\"5b210fea77c0a27c84c0ea23\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "errcode",
+            "defaultValue": "0",
+            "description": "<p>result of operation, 0 when success.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "errcode",
+            "description": "<p>!=0</p>"
+          }
+        ]
+      }
+    },
+    "filename": "src/apis/apiUtils.js",
+    "groupTitle": "Utils",
+    "sampleRequest": [
+      {
+        "url": "http://api.smartgreenai.com:32363/apis/v1/utils/unbinding"
+      }
+    ]
   }
 ]
