@@ -842,6 +842,59 @@
   },
   {
     "type": "POST",
+    "url": "/apis/v1/crud/device",
+    "title": "设备添加",
+    "description": "<p><code>Content-Type=&quot;application/json&quot;</code>，设备已存在报错。如果关联车辆不存在，则在车辆表中创建车辆</p>",
+    "name": "createDevice_",
+    "group": "Crud",
+    "version": "1.0.0",
+    "contentType": "application/json",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "errcode",
+            "defaultValue": "0",
+            "description": "<p>result of operation, 0 when success.</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{ //在公司页面添加设备\n _id, // 设备序列号\n company, // 公司_id\n vehicle,//车牌号，若vehicle表中不存在，会在车辆信息表加入记录\n status //状态\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "errcode",
+            "defaultValue": "40010",
+            "description": "<p>The <code>id</code> of the User was not found.</p>"
+          }
+        ]
+      }
+    },
+    "sampleRequest": [
+      {
+        "url": "http://api.smartgreenai.com:32363/apis/v1/crud/device"
+      }
+    ],
+    "filename": "src/apis/apiCRUD.js",
+    "groupTitle": "Crud"
+  },
+  {
+    "type": "POST",
     "url": "/apis/v1/crud/:model",
     "title": "通用创建某个表中的记录",
     "description": "<p><code>Content-Type=&quot;application/json&quot;</code>，可选model:<code>user</code>,<code>device</code>,<code>company</code>,<code>vehicle</code></p>",
@@ -1428,12 +1481,12 @@
       "examples": [
         {
           "title": "Request-Example:",
-          "content": "{\n data:\"http://www.myavatar.com/link/img1.jpg\",\n}",
+          "content": "{\n data:\"http://www.myavatar.com/link/img1.jpg\", //单个数据，叶子节点数据\n}",
           "type": "json"
         },
         {
           "title": "Request-Example:",
-          "content": "{\n data:{\n   contacts:[{name, phone}],\n   sms:'mod1',\n   on:true/false\n },\n}",
+          "content": "{\n data:{ //某个子节点数据\n   contacts:[{name, phone}],\n   sms:'mod1',\n   on:true/false\n },\n}",
           "type": "json"
         }
       ]
@@ -2055,7 +2108,7 @@
     "type": "POST",
     "url": "/apis/v1/utils/bindingV2",
     "title": "设备绑定V2",
-    "description": "<p><code>Content-Type=&quot;application/json&quot;</code>，同功能URL：<code>/apis/v1/utils/binding_noauth</code></p>",
+    "description": "<p><code>Content-Type=&quot;application/json&quot;</code></p>",
     "name": "bindingV2",
     "group": "Utils",
     "version": "1.0.0",
