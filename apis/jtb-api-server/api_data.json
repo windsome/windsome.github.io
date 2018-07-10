@@ -68,7 +68,7 @@
     "type": "POST",
     "url": "/apis/v1/auth/changepassword",
     "title": "密码修改",
-    "description": "<p><code>Content-Type=&quot;application/json&quot;</code> 需登录后设置,</p>",
+    "description": "<p><code>Content-Type=&quot;application/json&quot;</code> 需登录,传Authorization头</p>",
     "name": "changePassword",
     "group": "Auth",
     "version": "1.0.0",
@@ -76,13 +76,6 @@
     "parameter": {
       "fields": {
         "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "phone",
-            "description": "<p>电话号码，已登录后不需要传此参数</p>"
-          },
           {
             "group": "Parameter",
             "type": "String",
@@ -1542,7 +1535,7 @@
       "examples": [
         {
           "title": "Request-Example:",
-          "content": "{\n _id,\n username, // 用户名\n phone, // 手机号\n password,\n status, // 状态，默认0\n desc,\n company, // 公司ID\n name, // 姓名\n avatar, // 头像\n sos:{\n   contacts:[{name, phone}], // 紧急联系人姓名和电话\n   sms:'mod1', //消息模板\n   on:true/false //是否开启紧急报警\n },\n}",
+          "content": "{\n _id,\n username, // 用户名\n phone, // 手机号\n password,\n status, //0:正常，1：注销，2：待审核（申请开通中）,3:审核失败\n desc,\n company, // 公司ID\n name, // 姓名\n avatar, // 头像\n sos:{\n   contacts:[{name, phone}], // 紧急联系人姓名和电话\n   sms:'mod1', //消息模板\n   on:true/false //是否开启紧急报警\n },\n}",
           "type": "json"
         }
       ]
@@ -1567,7 +1560,7 @@
       "examples": [
         {
           "title": "Request-Example:",
-          "content": "{\n _id, //车牌号\n status, //状态，默认0\n type, // 车辆类型：小客车，大客车，化危车辆\n desc: {\n   power, //动力类型\n   weightTotal, // 总重量\n   weightSchedule, //额定重量\n   length, //车长度\n   width, //车宽度\n   height, //车高度\n   axleCount //车轴数量\n },\n}",
+          "content": "{\n _id, //车牌号\n status, //状态，默认0\n type, // 车辆类型??：0:小客车，1:大客车，2:旅游包车，3:载货车辆，4:自卸车辆，5:化危车辆\n desc: {\n   power, //动力类型（目前为string，纯电动、插电混动）\n   weightTotal, // 总重量\n   weightSchedule, //额定重量\n   length, //车长度\n   width, //车宽度\n   height, //车高度\n   axleCount //车轴数量\n },\n}",
           "type": "json"
         }
       ]
@@ -1649,6 +1642,107 @@
     "sampleRequest": [
       {
         "url": "http://api.smartgreenai.com:32363/apis/v1/rest/:model"
+      }
+    ]
+  },
+  {
+    "type": "GET",
+    "url": "/apis/v1/rest/:model",
+    "title": "获取记录列表",
+    "description": "<p>model:<code>user,company,vehicle,device</code></p>",
+    "name": "getModals",
+    "group": "RestTest",
+    "version": "1.0.0",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "model",
+            "description": "<p>Mandatory modelname.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n errcode,\n result: {\n   total,\n   count,\n   limit,\n   skip,\n   data:[\n     {\n       _id,\n       desc,\n       status,\n       phone,\n       createdAt,\n       updatedAt\n     }\n   ]\n }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "{\n errcode: !=0,\n message: \"error message\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "src/apis/apiRestful.js",
+    "groupTitle": "RestTest",
+    "sampleRequest": [
+      {
+        "url": "http://api.smartgreenai.com:32363/apis/v1/rest/:model"
+      }
+    ]
+  },
+  {
+    "type": "GET",
+    "url": "/apis/v1/rest/:model/:_id",
+    "title": "获取某个_id的记录信息",
+    "description": "<p>model:<code>user,company,vehicle,device</code></p>",
+    "name": "getModel",
+    "group": "RestTest",
+    "version": "1.0.0",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "model",
+            "description": "<p>Mandatory modelname.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "_id",
+            "description": "<p>Mandatory</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n errcode,\n result: {\n   _id,\n   desc,\n   status,\n   phone,\n   createdAt,\n   updatedAt\n }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "{\n errcode: !=0,\n message: \"error message\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "src/apis/apiRestful.js",
+    "groupTitle": "RestTest",
+    "sampleRequest": [
+      {
+        "url": "http://api.smartgreenai.com:32363/apis/v1/rest/:model/:_id"
       }
     ]
   },
