@@ -896,8 +896,8 @@
   {
     "type": "POST",
     "url": "/apis/v1/crud/:model",
-    "title": "通用创建某个表中的记录",
-    "description": "<p><code>Content-Type=&quot;application/json&quot;</code>，可选model:<code>user</code>,<code>device</code>,<code>company</code>,<code>vehicle</code></p>",
+    "title": "通用创建表记录",
+    "description": "<p><code>Content-Type=&quot;application/json&quot;</code>，可选model:<code>user</code>,<code>device</code>,<code>company</code>,<code>vehicle</code>,<code>comment</code></p>",
     "name": "createModel_crud_",
     "group": "Crud",
     "version": "1.0.0",
@@ -1306,8 +1306,8 @@
   {
     "type": "DELETE",
     "url": "/apis/v1/crud/:model/:_id",
-    "title": "通用删除某个表中的记录",
-    "description": "<p><code>Content-Type=&quot;application/json&quot;</code>，可选model:<code>user</code>,<code>device</code>,<code>company</code>,<code>vehicle</code></p>",
+    "title": "通用删除表记录",
+    "description": "<p><code>Content-Type=&quot;application/json&quot;</code>，可选model:<code>user</code>,<code>device</code>,<code>company</code>,<code>vehicle</code>,<code>comment</code></p>",
     "name": "removeModel_crud_",
     "group": "Crud",
     "version": "1.0.0",
@@ -1379,8 +1379,8 @@
   {
     "type": "PUT",
     "url": "/apis/v1/crud/:model/:_id",
-    "title": "通用更新某个表中的记录",
-    "description": "<p><code>Content-Type=&quot;application/json&quot;</code>，可选model:<code>user</code>,<code>device</code>,<code>company</code>,<code>vehicle</code> 也可以使用<code>POST</code>。</p>",
+    "title": "通用更新表记录",
+    "description": "<p><code>Content-Type=&quot;application/json&quot;</code>，可选model:<code>user</code>,<code>device</code>,<code>company</code>,<code>vehicle</code>,<code>comment</code> 也可以使用<code>POST</code>。</p>",
     "name": "updateModel_crud_",
     "group": "Crud",
     "version": "1.0.0",
@@ -1486,7 +1486,7 @@
         },
         {
           "title": "Request-Example:",
-          "content": "{\n data:{ //某个子节点数据\n   contacts:[{name, phone}],\n   sms:'mod1',\n   on:true/false\n },\n}",
+          "content": "{\n data:{ //某个子节点数据\n   contacts:[{name, phone}],\n   sms:'mod1',\n   timeout:80,\n   on:true/false\n },\n}",
           "type": "json"
         }
       ]
@@ -1528,7 +1528,32 @@
   },
   {
     "type": "GET",
-    "url": "/apis/v1/crud/company",
+    "url": "/apis/v1/rest/comment",
+    "title": "表Comment",
+    "name": "Db_Comment",
+    "group": "Database",
+    "version": "1.0.0",
+    "contentType": "application/json",
+    "parameter": {
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n _id, //车牌号\n status, //状态，默认0:新建,1:已处理\n user, //用户_id\n content, // 内容\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "src/mongo/Schemas.js",
+    "groupTitle": "Database",
+    "sampleRequest": [
+      {
+        "url": "http://api.smartgreenai.com:32363/apis/v1/rest/comment"
+      }
+    ]
+  },
+  {
+    "type": "GET",
+    "url": "/apis/v1/rest/company",
     "title": "表Company",
     "name": "Db_Company",
     "group": "Database",
@@ -1547,13 +1572,13 @@
     "groupTitle": "Database",
     "sampleRequest": [
       {
-        "url": "http://api.smartgreenai.com:32363/apis/v1/crud/company"
+        "url": "http://api.smartgreenai.com:32363/apis/v1/rest/company"
       }
     ]
   },
   {
     "type": "GET",
-    "url": "/apis/v1/crud/device",
+    "url": "/apis/v1/rest/device",
     "title": "表Device",
     "name": "Db_Device",
     "group": "Database",
@@ -1572,13 +1597,13 @@
     "groupTitle": "Database",
     "sampleRequest": [
       {
-        "url": "http://api.smartgreenai.com:32363/apis/v1/crud/device"
+        "url": "http://api.smartgreenai.com:32363/apis/v1/rest/device"
       }
     ]
   },
   {
     "type": "GET",
-    "url": "/apis/v1/crud/user",
+    "url": "/apis/v1/rest/user",
     "title": "表User",
     "name": "Db_User",
     "group": "Database",
@@ -1597,13 +1622,13 @@
     "groupTitle": "Database",
     "sampleRequest": [
       {
-        "url": "http://api.smartgreenai.com:32363/apis/v1/crud/user"
+        "url": "http://api.smartgreenai.com:32363/apis/v1/rest/user"
       }
     ]
   },
   {
     "type": "GET",
-    "url": "/apis/v1/crud/vehicle",
+    "url": "/apis/v1/rest/vehicle",
     "title": "表Vehicle",
     "name": "Db_Vehicle",
     "group": "Database",
@@ -1622,7 +1647,7 @@
     "groupTitle": "Database",
     "sampleRequest": [
       {
-        "url": "http://api.smartgreenai.com:32363/apis/v1/crud/vehicle"
+        "url": "http://api.smartgreenai.com:32363/apis/v1/rest/vehicle"
       }
     ]
   },
@@ -1935,6 +1960,138 @@
         "url": "http://api.smartgreenai.com:32363/apis/v1/rest/:model/:_id"
       }
     ]
+  },
+  {
+    "type": "GET",
+    "url": "/apis/v1/crud/:model/:_id",
+    "title": "通用获取某_id记录",
+    "description": "<p>可选model:<code>user</code>,<code>device</code>,<code>company</code>,<code>vehicle</code>,<code>comment</code></p>",
+    "name": "getModel_rest_",
+    "group": "Restful",
+    "version": "1.0.0",
+    "contentType": "application/json",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "model",
+            "defaultValue": "user",
+            "description": "<p>Mandatory model.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "_id",
+            "defaultValue": "5b210fea77c0a27c84c0ea23",
+            "description": "<p>Mandatory _id.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "errcode",
+            "defaultValue": "0",
+            "description": "<p>result of operation, 0 when success.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "errcode",
+            "defaultValue": "40010",
+            "description": "<p>The <code>id</code> of the User was not found.</p>"
+          }
+        ]
+      }
+    },
+    "sampleRequest": [
+      {
+        "url": "http://api.smartgreenai.com:32363/apis/v1/crud/:model"
+      }
+    ],
+    "filename": "src/apis/apiCRUD.js",
+    "groupTitle": "Restful"
+  },
+  {
+    "type": "GET",
+    "url": "/apis/v1/crud/:model?:qs",
+    "title": "通用获取记录列表",
+    "description": "<p>可选model:<code>user</code>,<code>device</code>,<code>company</code>,<code>vehicle</code>,<code>comment</code></p>",
+    "name": "getModels_rest_",
+    "group": "Restful",
+    "version": "1.0.0",
+    "contentType": "application/json",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "model",
+            "defaultValue": "user",
+            "description": "<p>Mandatory model.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "qs",
+            "defaultValue": "phone=1223344332&x=y",
+            "description": "<p>Mandatory model.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "errcode",
+            "defaultValue": "0",
+            "description": "<p>result of operation, 0 when success.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "errcode",
+            "defaultValue": "40010",
+            "description": "<p>The <code>id</code> of the User was not found.</p>"
+          }
+        ]
+      }
+    },
+    "sampleRequest": [
+      {
+        "url": "http://api.smartgreenai.com:32363/apis/v1/crud/:model?:qs"
+      }
+    ],
+    "filename": "src/apis/apiCRUD.js",
+    "groupTitle": "Restful"
   },
   {
     "type": "POST",
