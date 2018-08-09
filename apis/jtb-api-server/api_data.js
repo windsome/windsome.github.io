@@ -182,6 +182,70 @@ define({ "api": [
   },
   {
     "type": "POST",
+    "url": "/apis/v2/auth/changephone/get_sms_code",
+    "title": "修改手机号-获取手机验证码",
+    "description": "<p><code>Content-Type=&quot;application/json&quot;</code></p>",
+    "name": "getSmsCodeChangePhone",
+    "group": "AuthV2",
+    "version": "1.0.0",
+    "contentType": "application/json",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "phone",
+            "defaultValue": "13661989491",
+            "description": "<p>Mandatory phone.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n phone:\"13661989491\",\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "errcode",
+            "defaultValue": "0",
+            "description": "<p>result of operation, 0 when success.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "errcode",
+            "description": "<p>!=0</p>"
+          }
+        ]
+      }
+    },
+    "filename": "src/apis/apiAuthV2.js",
+    "groupTitle": "AuthV2",
+    "sampleRequest": [
+      {
+        "url": "http://api.smartgreenai.com:32363/apis/v2/auth/changephone/get_sms_code"
+      }
+    ]
+  },
+  {
+    "type": "POST",
     "url": "/apis/v2/auth/regist_login/get_sms_code",
     "title": "注册或登录-获取手机验证码",
     "description": "<p><code>Content-Type=&quot;application/json&quot;</code></p>",
@@ -332,7 +396,7 @@ define({ "api": [
   },
   {
     "type": "POST",
-    "url": "/apis/v2/auth/regist_login_smscode",
+    "url": "/apis/v2/auth/regist_login",
     "title": "注册或登录-使用验证码注册或登录",
     "description": "<p><code>Content-Type=&quot;application/json&quot;</code></p>",
     "name": "registOrLoginSmsCode",
@@ -395,7 +459,7 @@ define({ "api": [
     "groupTitle": "AuthV2",
     "sampleRequest": [
       {
-        "url": "http://api.smartgreenai.com:32363/apis/v2/auth/regist_login_smscode"
+        "url": "http://api.smartgreenai.com:32363/apis/v2/auth/regist_login"
       }
     ]
   },
@@ -1485,8 +1549,8 @@ define({ "api": [
   {
     "type": "GET",
     "url": "/apis/v1/crud/user/:_id/sos",
-    "title": "用户某个字段信息获取(sos,avatar)",
-    "description": "<p><code>Content-Type=&quot;application/json&quot;</code><br/> 相关系列api：<br/> <code>/user/:_id/sos</code><br/> <code>/user/:_id/avatar</code><br/></p>",
+    "title": "用户某个字段信息获取(sos,avatar,targets)",
+    "description": "<p><code>Content-Type=&quot;application/json&quot;</code><br/> 相关系列api：<br/> <code>/user/:_id/sos</code><br/> <code>/user/:_id/avatar</code><br/> <code>/user/:_id/targets</code><br/></p>",
     "name": "getUserAttr_",
     "group": "Crud",
     "version": "1.0.0",
@@ -1712,6 +1776,79 @@ define({ "api": [
     "groupTitle": "Crud"
   },
   {
+    "type": "POST",
+    "url": "/apis/v1/crud/user/:_id/targets/remove/:index",
+    "title": "用户收藏的目的地删除",
+    "description": "<p><code>Content-Type=&quot;application/json&quot;</code></p>",
+    "name": "removeUserTarget_",
+    "group": "Crud",
+    "version": "1.0.0",
+    "contentType": "application/json",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "_id",
+            "defaultValue": "5b210fea77c0a27c84c0ea23",
+            "description": "<p>Mandatory id.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "index",
+            "defaultValue": "0",
+            "description": "<p>Mandatory index.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "json",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Mandatory json data {name, address, detail}.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "errcode",
+            "defaultValue": "0",
+            "description": "<p>result of operation, 0 when success.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "errcode",
+            "defaultValue": "40010",
+            "description": "<p>The <code>id</code> of the User was not found.</p>"
+          }
+        ]
+      }
+    },
+    "filename": "src/apis/apiCRUD.js",
+    "groupTitle": "Crud",
+    "sampleRequest": [
+      {
+        "url": "http://api.smartgreenai.com:32363/apis/v1/crud/user/:_id/targets/remove/:index"
+      }
+    ]
+  },
+  {
     "type": "PUT",
     "url": "/apis/v1/crud/:model/:_id",
     "title": "通用更新表记录",
@@ -1787,8 +1924,8 @@ define({ "api": [
   {
     "type": "PUT",
     "url": "/apis/v1/crud/user/:_id/sos",
-    "title": "用户某个字段的信息更新(sos,avatar)",
-    "description": "<p><code>Content-Type=&quot;application/json&quot;</code><br/> 也可以使用<code>POST</code>。相关系列api：<br/> <code>/user/:_id/sos</code><br/> <code>/user/:_id/avatar</code><br/></p>",
+    "title": "用户某个字段的信息更新(sos,avatar,targets)",
+    "description": "<p><code>Content-Type=&quot;application/json&quot;</code><br/> 也可以使用<code>POST</code>。相关系列api：<br/> <code>/user/:_id/sos</code><br/> <code>/user/:_id/avatar</code><br/> <code>/user/:_id/targets</code><br/></p>",
     "name": "updateUserAttr_",
     "group": "Crud",
     "version": "1.0.0",
@@ -1860,6 +1997,79 @@ define({ "api": [
     ],
     "filename": "src/apis/apiCRUD.js",
     "groupTitle": "Crud"
+  },
+  {
+    "type": "POST",
+    "url": "/apis/v1/crud/user/:_id/targets/:index",
+    "title": "用户收藏的目的地设置或更新",
+    "description": "<p><code>Content-Type=&quot;application/json&quot;</code></p>",
+    "name": "updateUserTarget_",
+    "group": "Crud",
+    "version": "1.0.0",
+    "contentType": "application/json",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "_id",
+            "defaultValue": "5b210fea77c0a27c84c0ea23",
+            "description": "<p>Mandatory id.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "index",
+            "defaultValue": "0",
+            "description": "<p>Mandatory index.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "json",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Mandatory json data {name, address, detail}.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "errcode",
+            "defaultValue": "0",
+            "description": "<p>result of operation, 0 when success.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "errcode",
+            "defaultValue": "40010",
+            "description": "<p>The <code>id</code> of the User was not found.</p>"
+          }
+        ]
+      }
+    },
+    "filename": "src/apis/apiCRUD.js",
+    "groupTitle": "Crud",
+    "sampleRequest": [
+      {
+        "url": "http://api.smartgreenai.com:32363/apis/v1/crud/user/:_id/targets/:index"
+      }
+    ]
   },
   {
     "type": "GET",
