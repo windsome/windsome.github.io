@@ -66,6 +66,341 @@
   },
   {
     "type": "POST",
+    "url": "/apis/v2/auth/changephone",
+    "title": "修改手机号",
+    "description": "<p><code>Content-Type=&quot;application/json&quot;</code>，用验证码修改手机</p>",
+    "name": "changePhone",
+    "group": "AuthV2",
+    "version": "1.0.0",
+    "contentType": "application/json",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "phone",
+            "defaultValue": "13661989491",
+            "description": "<p>Mandatory phone.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "code",
+            "defaultValue": "1234",
+            "description": "<p>Mandatory code.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n phone:\"13661989491\",\n code: \"1234\",\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "errcode",
+            "defaultValue": "0",
+            "description": "<p>result of operation, 0 when success.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "errcode",
+            "defaultValue": "40010",
+            "description": "<p>The <code>id</code> of the User was not found.</p>"
+          }
+        ]
+      }
+    },
+    "filename": "src/apis/apiAuthV2.js",
+    "groupTitle": "AuthV2",
+    "sampleRequest": [
+      {
+        "url": "http://api.smartgreenai.com:32363/apis/v2/auth/changephone"
+      }
+    ]
+  },
+  {
+    "type": "POST",
+    "url": "/apis/v2/auth/checklogin",
+    "title": "检查登录状态",
+    "description": "<p><code>Content-Type=&quot;application/json&quot;</code></p>",
+    "name": "checkLogin",
+    "group": "AuthV2",
+    "version": "1.0.0",
+    "contentType": "application/json",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "JSON",
+            "optional": false,
+            "field": "json",
+            "description": "<p>数据，errcode为0或空</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "errcode",
+            "defaultValue": "!0",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "filename": "src/apis/apiAuthV2.js",
+    "groupTitle": "AuthV2",
+    "sampleRequest": [
+      {
+        "url": "http://api.smartgreenai.com:32363/apis/v2/auth/checklogin"
+      }
+    ]
+  },
+  {
+    "type": "POST",
+    "url": "/apis/v2/auth/regist_login/get_sms_code",
+    "title": "注册或登录-获取手机验证码",
+    "description": "<p><code>Content-Type=&quot;application/json&quot;</code></p>",
+    "name": "getSmsCodeRegistOrLogin",
+    "group": "AuthV2",
+    "version": "1.0.0",
+    "contentType": "application/json",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "phone",
+            "defaultValue": "13661989491",
+            "description": "<p>Mandatory phone.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n phone:\"13661989491\",\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "errcode",
+            "defaultValue": "0",
+            "description": "<p>result of operation, 0 when success.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "errcode",
+            "description": "<p>!=0</p>"
+          }
+        ]
+      }
+    },
+    "filename": "src/apis/apiAuthV2.js",
+    "groupTitle": "AuthV2",
+    "sampleRequest": [
+      {
+        "url": "http://api.smartgreenai.com:32363/apis/v2/auth/regist_login/get_sms_code"
+      }
+    ]
+  },
+  {
+    "type": "POST",
+    "url": "/apis/v2/auth/logout",
+    "title": "退出登录",
+    "description": "<p><code>Content-Type=&quot;application/json&quot;</code> 目前无具体功能</p>",
+    "name": "logout",
+    "group": "AuthV2",
+    "version": "1.0.0",
+    "contentType": "application/json",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "JSON",
+            "optional": false,
+            "field": "json",
+            "description": "<p>数据，errcode为0或空</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "errcode",
+            "defaultValue": "!0",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "filename": "src/apis/apiAuthV2.js",
+    "groupTitle": "AuthV2",
+    "sampleRequest": [
+      {
+        "url": "http://api.smartgreenai.com:32363/apis/v2/auth/logout"
+      }
+    ]
+  },
+  {
+    "type": "POST",
+    "url": "/apis/v2/auth/refresh",
+    "title": "登录-刷新token",
+    "description": "<p><code>Content-Type=&quot;application/json&quot;</code></p>",
+    "name": "refresh",
+    "group": "AuthV2",
+    "version": "1.0.0",
+    "contentType": "application/json",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "JSON",
+            "optional": false,
+            "field": "json",
+            "description": "<p>数据，errcode为0或空</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "errcode",
+            "defaultValue": "!0",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "filename": "src/apis/apiAuthV2.js",
+    "groupTitle": "AuthV2",
+    "sampleRequest": [
+      {
+        "url": "http://api.smartgreenai.com:32363/apis/v2/auth/refresh"
+      }
+    ]
+  },
+  {
+    "type": "POST",
+    "url": "/apis/v2/auth/regist_login_smscode",
+    "title": "注册或登录-使用验证码注册或登录",
+    "description": "<p><code>Content-Type=&quot;application/json&quot;</code></p>",
+    "name": "registOrLoginSmsCode",
+    "group": "AuthV2",
+    "version": "1.0.0",
+    "contentType": "application/json",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "phone",
+            "description": "<p>电话号码</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "code",
+            "description": "<p>手机验证码，一般为4位数</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n \"phone\":\"13661989491\",\n \"code\":\"1234\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "JSON",
+            "optional": false,
+            "field": "json",
+            "description": "<p>数据，errcode为0或空</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "errcode",
+            "description": "<p>!0</p>"
+          }
+        ]
+      }
+    },
+    "filename": "src/apis/apiAuthV2.js",
+    "groupTitle": "AuthV2",
+    "sampleRequest": [
+      {
+        "url": "http://api.smartgreenai.com:32363/apis/v2/auth/regist_login_smscode"
+      }
+    ]
+  },
+  {
+    "type": "POST",
     "url": "/apis/v1/auth/changepassword",
     "title": "密码修改",
     "description": "<p><code>Content-Type=&quot;application/json&quot;</code> 需登录,传Authorization头</p>",
@@ -2128,6 +2463,14 @@
             "field": "lng",
             "defaultValue": "103.661989491",
             "description": "<p>Mandatory lng.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "passive",
+            "defaultValue": "0|1",
+            "description": "<p>Mandatory 被动模式,默认为0:主动模式,即点击一键报警触发.1为被动模式,即算法被动触发.</p>"
           },
           {
             "group": "Parameter",
