@@ -1587,6 +1587,11 @@
           "title": "Success-Response:",
           "content": " HTTP/1.1 200 OK\n{\n errcode: 0,\n data: {\n   _id,\n   username,\n   phone,\n   status,\n   desc: {\n     name,\n   },\n   company\n }\n}",
           "type": "json"
+        },
+        {
+          "title": "Success-Response:",
+          "content": " HTTP/1.1 200 OK\n{\n errcode: 0,\n data: [{\n   _id,\n   name,\n   address,\n   detail: {\n     lat,\n     lng\n   }\n }]\n}",
+          "type": "json"
         }
       ]
     },
@@ -1825,7 +1830,14 @@
             "description": "<p>result of operation, 0 when success.</p>"
           }
         ]
-      }
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " HTTP/1.1 200 OK\n{\n errcode: 0,\n result: [{\n   _id,\n   name,\n   address,\n   detail: {\n     lat,\n     lng\n   }\n }]\n}",
+          "type": "json"
+        }
+      ]
     },
     "error": {
       "fields": {
@@ -1960,6 +1972,11 @@
           "title": "Request-Example:",
           "content": "{\n data:{ //某个子节点数据\n   contacts:[{name, phone}],\n   sms:'mod1',\n   timeout:80,\n   on:true/false\n },\n}",
           "type": "json"
+        },
+        {
+          "title": "Request-Example:",
+          "content": "{\n data:[{ //某个子节点数据\n   name:[{name, phone}],\n   address:'mod1',\n   detail:{lat:31.11232, lng:114.322342}\n }]\n}",
+          "type": "json"
         }
       ]
     },
@@ -2034,7 +2051,14 @@
             "description": "<p>Mandatory json data {name, address, detail}.</p>"
           }
         ]
-      }
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n   name:'家',\n   address:'家的地址信息',\n   detail:{lat:31.11232, lng:114.322342}\n}",
+          "type": "json"
+        }
+      ]
     },
     "success": {
       "fields": {
@@ -2048,7 +2072,14 @@
             "description": "<p>result of operation, 0 when success.</p>"
           }
         ]
-      }
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " HTTP/1.1 200 OK\n{\n errcode: 0,\n result: [{\n   _id,\n   name,\n   address,\n   detail: {\n     lat,\n     lng\n   }\n }]\n}",
+          "type": "json"
+        }
+      ]
     },
     "error": {
       "fields": {
