@@ -136,6 +136,15 @@ Environment="HTTP_PROXY=http://127.0.0.1:34743"
 
 ### 使用kubeadm搭建Kubernetes(1.10.2)集群（国内环境）
 [使用kubeadm搭建Kubernetes(1.10.2)集群（国内环境）](http://www.cnblogs.com/RainingNight/p/using-kubeadm-to-create-a-cluster.html)
+其中注意安装`kublet, kubadm, kubectl`时指定版本为`1.10.2-00`
+```
+  134  apt-get install kubelet=1.10.2-00
+  135  apt-cache madison kubeadm
+  136  apt-get install kubeadm=1.10.2-00
+  137  apt-cache madison kubectl
+  138  apt-get install kubectl=1.10.2-00
+```
+初始化master:`kubeadm init --kubernetes-version=v1.10.2 --feature-gates=CoreDNS=true --pod-network-cidr=192.168.0.0/16`
 ```
 root@iZm5ee51qo3lgnj6mo6sz9Z:~# kubeadm init --kubernetes-version=v1.10.2 --feature-gates=CoreDNS=true --pod-network-cidr=192.168.0.0/16
 [init] Using Kubernetes version: v1.10.2
@@ -199,3 +208,216 @@ as root:
 ### kubernetes-dashboard(1.8.3)部署与踩坑
 [kubernetes-dashboard(1.8.3)部署与踩坑](https://www.cnblogs.com/RainingNight/p/deploying-k8s-dashboard-ui.html)
 
+### 操作记录
+```
+    1  wget https://github.com/kubeup/archon/releases/download/v0.3.0/archon-controller-v0.3.0-linux-amd64.gz
+    2  ls
+    3  wget https://github.com/kubeup/archon/releases/download/v0.3.0/archon-controller-v0.3.0-linux-amd64.gz
+    4  vi .ssh/authorized_keys 
+    5  vi /etc/hosts
+    6  wget https://github.com/kubeup/archon/releases/download/v0.3.0/archon-controller-v0.3.0-linux-amd64.gz
+    7  ls
+    8  rm archon-controller-v0.3.0-linux-amd64.gz 
+    9  ls
+   10  systemctl stop firewalld && systemctl disable firewalld
+   11  setenforce 0
+   12  ls
+   13  ifconfig
+   14  ls
+   15  vi /etc/hosts
+   16  $ curl -fsSL https://get.docker.com/ | sh
+   17  curl -fsSL https://get.docker.com/ | sh
+   18  reboot
+   19  ping get.docker.com
+   20  ifconfig
+   21  cat /etc/resolv.conf 
+   22  cd /etc/
+   23  cp resolv.conf resolv.conf.20180812
+   24  vi resolv.conf
+   25  resolvconf
+   26  ping 223.5.5.5
+   27  resolvconf 223.5.5.5
+   28  ls /run/resolvconf/interface/
+   29  cat /run/resolvconf/resolv.conf 
+   30  vi resolv.conf
+   31  ll resolv
+   32  ll resolv.conf
+   33  ll
+   34  vi resolv.conf
+   35  llcd
+   36  cd
+   37  ping get.docker.com
+   38  curl -fsSL https://get.docker.com/ | sh
+   39  systemctl enable docker && systemctl start docker
+   40  cat <<EOF | tee /etc/sysctl.d/k8s.conf
+   41  net.ipv4.ip_forward = 1
+   42  net.bridge.bridge-nf-call-ip6tables = 1
+   43  net.bridge.bridge-nf-call-iptables = 1
+   44  EOF
+   45  sysctl -p /etc/sysctl.d/k8s.conf
+   46  swapoff -a && sysctl -w vm.swappiness=0
+   47  vi /etc/fstab 
+   48  wget ${KUBE_URL}/kubelet -O /usr/local/bin/kubelet
+   49  apt install lrzsz -y
+   50  swapoff -a
+   51  wget https://d11.baidupcs.com/file/bd1076fb11b43568c838ca52a73bd85e?bkt=p3-00008d9da4653051b9c4f2c5a264116d2eef&xcode=992b2098c881de6c9ef1bae760d2a1c241e736d4978b23ef3b9ff89589aebd9f0bcfe8fcf2126a9492d06473ec36306a0b2977702d3e6764&fid=2550409439-250528-858992362126421&time=1534086237&sign=FDTAXGERLQBHSKa-DCb740ccc5511e5e8fedcff06b081203-6yBbsCgTLjNrMGdCeW%2Bx5iYLDms%3D&to=d11&size=53634362&sta_dx=53634362&sta_cs=78&sta_ft=gz&sta_ct=4&sta_mt=4&fm2=MH%2CYangquan%2CAnywhere%2C%2Cbeijing%2Cct&resv0=cdnback&resv1=0&vuk=1010784632&iv=0&htype=&newver=1&newfm=1&secfm=1&flow_ver=3&pkey=00008d9da4653051b9c4f2c5a264116d2eef&sl=76480590&expires=8h&rt=sh&r=738091473&mlogid=5194289648603609678&vbdid=411777696&fin=002.001.k8s.deb.v1.11.1.tar.gz&fn=002.001.k8s.deb.v1.11.1.tar.gz&rtype=1&dp-logid=5194289648603609678&dp-callid=0.1.1&hps=1&tsl=80&csl=80&csign=cHFcKYZkCuUkckqqyYeSPA0p1vw%3D&so=0&ut=6&uter=4&serv=0&uc=293718707&ti=78cccb630bb0656e00a3f0e766a33e0b086b90df8e3e0da1&by=themis
+   52  ls
+   53  wget "https://d11.baidupcs.com/file/bd1076fb11b43568c838ca52a73bd85e?bkt=p3-00008d9da4653051b9c4f2c5a264116d2eef&xcode=992b2098c881de6c9ef1bae760d2a1c241e736d4978b23ef3b9ff89589aebd9f0bcfe8fcf2126a9492d06473ec36306a0b2977702d3e6764&fid=2550409439-250528-858992362126421&time=1534086237&sign=FDTAXGERLQBHSKa-DCb740ccc5511e5e8fedcff06b081203-6yBbsCgTLjNrMGdCeW%2Bx5iYLDms%3D&to=d11&size=53634362&sta_dx=53634362&sta_cs=78&sta_ft=gz&sta_ct=4&sta_mt=4&fm2=MH%2CYangquan%2CAnywhere%2C%2Cbeijing%2Cct&resv0=cdnback&resv1=0&vuk=1010784632&iv=0&htype=&newver=1&newfm=1&secfm=1&flow_ver=3&pkey=00008d9da4653051b9c4f2c5a264116d2eef&sl=76480590&expires=8h&rt=sh&r=738091473&mlogid=5194289648603609678&vbdid=411777696&fin=002.001.k8s.deb.v1.11.1.tar.gz&fn=002.001.k8s.deb.v1.11.1.tar.gz&rtype=1&dp-logid=5194289648603609678&dp-callid=0.1.1&hps=1&tsl=80&csl=80&csign=cHFcKYZkCuUkckqqyYeSPA0p1vw%3D&so=0&ut=6&uter=4&serv=0&uc=293718707&ti=78cccb630bb0656e00a3f0e766a33e0b086b90df8e3e0da1&by=themis"
+   54  ls
+   55  curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://e2a6d434.m.daocloud.io
+   56  systemctl restart docker.service
+   57  ssh-copy-id --help
+   58  man ssh-copy-id 
+   59  ls
+   60  wget https://pkg.cfssl.org/R1.2/cfssl_linux-amd64
+   61  chmod +x cfssl_linux-amd64
+   62  mv cfssl_linux-amd64 /usr/local/bin/cfssl
+   63  wget https://pkg.cfssl.org/R1.2/cfssljson_linux-amd64
+   64  chmod +x cfssljson_linux-amd64
+   65  mv cfssljson_linux-amd64 /usr/local/bin/cfssljson
+   66  wget https://pkg.cfssl.org/R1.2/cfssl-certinfo_linux-amd64
+   67  chmod +x cfssl-certinfo_linux-amd64
+   68  mv cfssl-certinfo_linux-amd64 /usr/local/bin/cfssl-certinfo
+   69  mkdir /root/ssl
+   70  ls
+   71  cd ssl/
+   72  vi ca-config.json
+   73  vi ca-csr.json
+   74  cfssl gencert -initca ca-csr.json | cfssljson -bare ca
+   75  ls
+   76  vi kubernetes-csr.json
+   77  cat /etc/hosts
+   78  vi kubernetes-csr.json
+   79  cfssl gencert -ca=ca.pem -ca-key=ca-key.pem -config=ca-config.json -profile=kubernetes kubernetes-csr.json | cfssljson -bare kubernetes
+   80  vi kubernetes-csr.json
+   81  vim admin-csr.json
+   82  cfssl gencert -ca=ca.pem -ca-key=ca-key.pem -config=ca-config.json -profile=kubernetes admin-csr.json | cfssljson -bare admin
+   83  vim kube-proxy-csr.json
+   84  cfssl gencert -ca=ca.pem -ca-key=ca-key.pem -config=ca-config.json -profile=kubernetes kube-proxy-csr.json | cfssljson -bare kube-proxy
+   85  mkdir -p /etc/kubernetes/ssl
+   86  cp -r *.pem /etc/kubernetes/ssl/
+   87  ls /etc/kubernetes/ssl/
+   88  wget https://github.com/coreos/etcd/releases/download/v3.2.11/etcd-v3.2.11-linux-amd64.tar.gz
+   89  cat <<EOF > /etc/apt/sources.list.d/kubernetes.list
+   90  deb http://mirrors.ustc.edu.cn/kubernetes/apt kubernetes-xenial main
+   91  EOF
+   92  apt update
+   93  curl -s http://packages.faasx.com/google/apt/doc/apt-key.gpg | sudo apt-key add -
+   94  apt update
+   95  apt-get install -y kubelet kubeadm kubectl
+   96  docker pull reg.qiniu.com/k8s/kube-apiserver-amd64:v1.10.2
+   97  docker pull reg.qiniu.com/k8s/kube-controller-manager-amd64:v1.10.2
+   98  docker pull reg.qiniu.com/k8s/kube-scheduler-amd64:v1.10.2
+   99  docker pull reg.qiniu.com/k8s/kube-proxy-amd64:v1.10.2
+  100  docker pull reg.qiniu.com/k8s/etcd-amd64:3.1.12
+  101  docker pull reg.qiniu.com/k8s/pause-amd64:3.1
+  102  docker tag reg.qiniu.com/k8s/kube-apiserver-amd64:v1.10.2 k8s.gcr.io/kube-apiserver-amd64:v1.10.2
+  103  docker tag reg.qiniu.com/k8s/kube-scheduler-amd64:v1.10.2 k8s.gcr.io/kube-scheduler-amd64:v1.10.2
+  104  docker tag reg.qiniu.com/k8s/kube-controller-manager-amd64:v1.10.2 k8s.gcr.io/kube-controller-manager-amd64:v1.10.2
+  105  docker tag reg.qiniu.com/k8s/kube-proxy-amd64:v1.10.2 k8s.gcr.io/kube-proxy-amd64:v1.10.2
+  106  docker tag reg.qiniu.com/k8s/etcd-amd64:3.1.12 k8s.gcr.io/etcd-amd64:3.1.12
+  107  docker tag reg.qiniu.com/k8s/pause-amd64:3.1 k8s.gcr.io/pause-amd64:3.1
+  108  docker pull reg.qiniu.com/k8s/k8s-dns-sidecar-amd64:1.14.10
+  109  docker pull reg.qiniu.com/k8s/k8s-dns-kube-dns-amd64:1.14.10
+  110  docker pull reg.qiniu.com/k8s/k8s-dns-dnsmasq-nanny-amd64:1.14.10
+  111  docker tag reg.qiniu.com/k8s/k8s-dns-sidecar-amd64:1.14.10 k8s.gcr.io/k8s-dns-sidecar-amd64:1.14.10
+  112  docker tag reg.qiniu.com/k8s/k8s-dns-kube-dns-amd64:1.14.10 k8s.gcr.io/k8s-dns-kube-dns-amd64:1.14.10
+  113  docker tag reg.qiniu.com/k8s/k8s-dns-dnsmasq-nanny-amd64:1.14.10 k8s.gcr.io/k8s-dns-dnsmasq-nanny-amd64:1.14.10
+  114  ifconfig
+  115  exit
+  116  docker images
+  117  kubeadm init --kubernetes-version=v1.10.2 --feature-gates=CoreDNS=true --pod-network-cidr=192.168.0.0/16
+  118  docker --version
+  119  apt remove docker-ce 
+  120  apt-get install -y docker.io
+  121  docker version
+  122  docker images
+  123  kubeadm init --kubernetes-version=v1.10.2 --feature-gates=CoreDNS=true --pod-network-cidr=192.168.0.0/16
+  124  kubelet --version
+  125  apt versions kubelet
+  126  apt-cache show kubelet
+  127  apt-get remove kubelet kubeadm kubectl 
+  128  ls
+  129  ssh -i c-key.pem root@39.106.8.77
+  130  ifconfig
+  131  ls
+  132  apt-get install kubelet=1.10.2
+  133  apt-cache madison kubelet
+  134  apt-get install kubelet=1.10.2-00
+  135  apt-cache madison kubeadm
+  136  apt-get install kubeadm=1.10.2-00
+  137  apt-cache madison kubectl
+  138  apt-get install kubectl=1.10.2-00
+  139  kubelet --version
+  140  kubeadm init --kubernetes-version=v1.10.2 --feature-gates=CoreDNS=true --pod-network-cidr=192.168.0.0/16
+  141  mkdir -p $HOME/.kube
+  142  ls .kube/
+  143  cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  144  id -u
+  145  id -g
+  146  kubectl apply -f http://mirror.faasx.com/kubernetes/installation/hosted/kubeadm/1.7/calico.yaml
+  147  kubectl get pods --all-namespaces
+  148  kubectl taint nodes --all node-role.kubernetes.io/master-
+  149  kubectl get nodes
+  150  kubeadm join 121.42.167.160:6443 --token n6lmc7.s1z7k6ogpferrau1 --discovery-token-ca-cert-hash sha256:e953eb6917cb6b56e6913deece81f69c24831373e4c1c7c8c3a38d986ea3f249
+  151  kubectl get nodes
+  152  kubectl get pods --all-namespaces
+  153  kubectl get all --all-namespaces
+  154  kubectl run my-nginx --image=nginx --replicas=2 --port=80
+  155  kubectl get all --all-namespaces
+  156  kubectl expose deployment my-nginx --port=30000 --target-port=80 --type=NodePort
+  157  kubectl get all --all-namespaces
+  158  kubectl apply -f http://mirror.faasx.com/kubernetes/dashboard/master/src/deploy/recommended/kubernetes-dashboard.yaml
+  159  kubectl get svc --all-namespaces
+  160  kubectl get pod --all-namespaces
+  161  kubectl create -f http://mirror.faasx.com/kubernetes/heapster/deploy/kube-config/influxdb/influxdb.yaml
+  162  kubectl create -f http://mirror.faasx.com/kubernetes/heapster/deploy/kube-config/influxdb/grafana.yaml
+  163  kubectl create -f http://mirror.faasx.com/kubernetes/heapster/deploy/kube-config/influxdb/heapster.yaml
+  164  kubectl create -f http://mirror.faasx.com/kubernetes/heapster/deploy/kube-config/rbac/heapster-rbac.yaml
+  165  kubectl get pod --all-namespaces
+  166  kubectl get pod -n kube-system
+  167  kubectl describe kube-apiserver-izm5ee51qo3lgnj6mo6sz9z -n kube-system
+  168  kubectl get all -n kube-system
+  169  kubectl describe service/kubernetes-dashboard -n kube-system
+  170  kubectl describe service/kubernetes-dashboard -n kube-system -o yaml
+  171  kubectl get service/kubernetes-dashboard -n kube-system -o yaml
+  172  cd .kube/
+  173  ls
+  174  vi config 
+  175  ls
+  176  grep 'client-certificate-data' ~/.kube/config | head -n 1 | awk '{print $2}' | base64 -d >> kubecfg.crt
+  177  grep 'client-key-data' ~/.kube/config | head -n 1 | awk '{print $2}' | base64 -d >> kubecfg.key
+  178  ls
+  179  openssl pkcs12 -export -clcerts -inkey kubecfg.key -in kubecfg.crt -out kubecfg.p12 -name "kubernetes-client"
+  180  ls
+  181  cd ..
+  182  ls
+  183  mkdir kubeback
+  184  cd .kube/
+  185  ls
+  186  mv kubecfg.crt kubecfg.key kubecfg.p12 ../kubeback/
+  187  ls
+  188  cd ..
+  189  ls
+  190  cd kubeback/
+  191  ls
+  192  vi kubecfg.crt 
+  193  vi kubecfg.key 
+  194  ll
+  195  ls
+  196  cd ..
+  197  ls
+  198  cd .kube/
+  199  ls
+  200  cd
+  201  ls
+  202  vi admin-user.yaml
+  203  kubectl create -f admin-user.yaml 
+  204  vi admin-user-role-binding.yaml
+  205  kubectl create -f  admin-user-role-binding.yaml
+  206  kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}')
+  207  history 
+  208  history | grep apt
+  209  reboot
+  210  history 
+```
