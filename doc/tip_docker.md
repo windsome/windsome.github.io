@@ -38,6 +38,7 @@ ADD root/scripts /root/scripts
   ```
   + `docker build -t="dockerfile/ubuntu" github.com/dockerfile/ubuntu`构建image
   + `docker images`查看构建出来的image
+  + 修改docker image的tag及名称`docker tag ca1b6b825289 registry.cn-hangzhou.aliyuncs.com/jtb-api-server:v1.0`或`docker tag 2a57f872a16b localhost/jtb-api-server:v1.0.0`
 
 ### K8S管理
 1. k8s-node维护命令

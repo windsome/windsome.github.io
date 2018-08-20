@@ -1240,6 +1240,71 @@ define({ "api": [
     ]
   },
   {
+    "type": "GET",
+    "url": "/apis/v1/crud/user/:_id/clear_targets",
+    "title": "用户收藏的目的地清空",
+    "description": "<p>清空用户收藏的目的地(不包含家和公司,即数组前两个)</p>",
+    "name": "clearUserTarget_",
+    "group": "Crud",
+    "version": "1.0.0",
+    "contentType": "application/json",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "_id",
+            "defaultValue": "5b210fea77c0a27c84c0ea23",
+            "description": "<p>用户ID.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "errcode",
+            "defaultValue": "0",
+            "description": "<p>result of operation, 0 when success.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " HTTP/1.1 200 OK\n{\n errcode: 0,\n result: [{\n   _id,\n   name,\n   address,\n   detail: {\n     lat,\n     lng\n   }\n }]\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "errcode",
+            "defaultValue": "40010",
+            "description": "<p>The <code>id</code> of the User was not found.</p>"
+          }
+        ]
+      }
+    },
+    "filename": "src/apis/apiCRUD.js",
+    "groupTitle": "Crud",
+    "sampleRequest": [
+      {
+        "url": "http://api.smartgreenai.com:32363/apis/v1/crud/user/:_id/clear_targets"
+      }
+    ]
+  },
+  {
     "type": "POST",
     "url": "/apis/v1/crud/device",
     "title": "设备添加",
@@ -2104,6 +2169,32 @@ define({ "api": [
   },
   {
     "type": "GET",
+    "url": "/apis/v1/rest/alarm",
+    "title": "表Alarm",
+    "description": "<p>一键求救信息表，发送短信的记录表<br/> 组合查询选项:<br/> 时间:createdAt[$gt]=2018-08-16T10:46:33.123Z<br/> 主动被动:desc.passive=0/1<br/> 接收者:desc.param.name=张三<br/> 接收电话:desc.phone=17610777993<br/></p>",
+    "name": "Db_Alarm",
+    "group": "Database",
+    "version": "1.0.0",
+    "contentType": "application/json",
+    "parameter": {
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n _id,\n status, // 状态，默认0:新建,1:已处理\n imei, // 手机imei\n user, // 发送者userId\n desc, // 详细内容\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "src/mongo/Schemas.js",
+    "groupTitle": "Database",
+    "sampleRequest": [
+      {
+        "url": "http://api.smartgreenai.com:32363/apis/v1/rest/alarm"
+      }
+    ]
+  },
+  {
+    "type": "GET",
     "url": "/apis/v1/rest/comment",
     "title": "表Comment",
     "name": "Db_Comment",
@@ -2189,7 +2280,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Request-Example:",
-          "content": "{\n _id,\n username, // 用户名\n phone, // 手机号\n password,\n status, //0:正常，1：注销，2：待审核（申请开通中）,3:审核失败\n desc,\n company, // 公司ID\n name, // 姓名\n avatar, // 头像\n sos:{\n   contacts:[{name, phone}], // 紧急联系人姓名和电话\n   sms:'mod1', //消息模板\n   on:true/false //是否开启紧急报警\n },\n}",
+          "content": "{\n _id,\n username, // 用户名\n phone, // 手机号\n password,\n status, //0:正常，1：注销，2：待审核（申请开通中）,3:审核失败\n desc,\n company, // 公司ID\n name, // 姓名\n sex, // 性别: 男/女/其他\n birth, // 生日: iso-datetime,如'2010-06-10T10.10.23Z'\n avatar, // 头像\n sos:{\n   contacts:[{name, phone}], // 紧急联系人姓名和电话\n   sms:'mod1', //消息模板\n   on:true/false //是否开启紧急报警\n },\n}",
           "type": "json"
         }
       ]
@@ -3037,6 +3128,124 @@ define({ "api": [
     "sampleRequest": [
       {
         "url": "http://api.smartgreenai.com:32363/apis/v1/utils/unbinding"
+      }
+    ]
+  },
+  {
+    "type": "GET",
+    "url": "/apis/v1/vehiclelimit/city",
+    "title": "获取限行城市列表",
+    "description": "<p>获取有限行正常的城市列表<br/> 接口文档:<a href=\"https://market.aliyun.com/products/57002002/cmapi011138.html?spm=5176.730005.productlist.d_cmapi011138.FhqJdT#sku=yuncode513800005\">https://market.aliyun.com/products/57002002/cmapi011138.html?spm=5176.730005.productlist.d_cmapi011138.FhqJdT#sku=yuncode513800005</a><br/> API:<a href=\"https://jisuclwhxx.market.alicloudapi.com/vehiclelimit/city\">https://jisuclwhxx.market.alicloudapi.com/vehiclelimit/city</a><br/></p>",
+    "name": "city",
+    "group": "WindMicroService",
+    "version": "1.0.0",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "result",
+            "description": "<p>of operation, {errcode:0,message,result}, errcode=0 when success, file is the dest filepath.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n    {\n      errcode:0,\n      message,\n      result:  [\n        {\n            \"city\": \"beijing\",\n            \"cityname\": \"北京\"\n        },\n        {\n            \"city\": \"tianjin\",\n            \"cityname\": \"天津\"\n        }\n      ]\n    }",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "errcode",
+            "description": "<p>!=0 error occurs.</p>"
+          }
+        ]
+      }
+    },
+    "filename": "src/apis/apiXianXing.js",
+    "groupTitle": "WindMicroService",
+    "sampleRequest": [
+      {
+        "url": "http://api.smartgreenai.com:32363/apis/v1/vehiclelimit/city"
+      }
+    ]
+  },
+  {
+    "type": "GET",
+    "url": "/apis/v1/vehiclelimit/query",
+    "title": "获取指定城市指定日期限行政策.",
+    "description": "<p>只缓存最后查询的那一天限行政策<br/> 接口文档:<a href=\"https://market.aliyun.com/products/57002002/cmapi011138.html?spm=5176.730005.productlist.d_cmapi011138.FhqJdT#sku=yuncode513800005\">https://market.aliyun.com/products/57002002/cmapi011138.html?spm=5176.730005.productlist.d_cmapi011138.FhqJdT#sku=yuncode513800005</a><br/> API:<a href=\"https://jisuclwhxx.market.alicloudapi.com/vehiclelimit/query?city=beijing&amp;date=2018-08-12\">https://jisuclwhxx.market.alicloudapi.com/vehiclelimit/query?city=beijing&amp;date=2018-08-12</a><br/></p>",
+    "name": "query",
+    "group": "WindMicroService",
+    "version": "1.0.0",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "city",
+            "defaultValue": "beijing",
+            "description": "<p>Mandatory 城市.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "date",
+            "defaultValue": "2018-08-12",
+            "description": "<p>Optional 日期,不填默认为当天.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "result",
+            "description": "<p>of operation, {errcode=0,message,result}, errcode=0 when success, file is the dest filepath.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n    {\n      errcode:0,\n      message,\n      result: {\n        \"city\": \"beijing\",\n        \"cityname\": \"北京\",\n        \"date\": \"2018-08-15\",\n        \"week\": \"星期三\",\n        \"time\": [\n            \"07:00-20:00\"\n        ],\n        \"area\": \"五环路（不含）以内道路\",\n        \"summary\": \"本市号牌尾号限行;外地号牌工作日(07:00-09:00、17:00-20:00)全部限行，其他限行时间内尾号限行;法定上班的周六周日不限行。\",\n        \"numberrule\": \"车牌号码最后一位数字，尾号为字母的按0号处理\",\n        \"number\": \"5和0\"\n      }\n    }",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "errcode",
+            "description": "<p>!=0 error occurs.</p>"
+          }
+        ]
+      }
+    },
+    "filename": "src/apis/apiXianXing.js",
+    "groupTitle": "WindMicroService",
+    "sampleRequest": [
+      {
+        "url": "http://api.smartgreenai.com:32363/apis/v1/vehiclelimit/query"
       }
     ]
   }
