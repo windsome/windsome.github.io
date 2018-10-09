@@ -66,12 +66,117 @@
   },
   {
     "type": "POST",
+    "url": "/apis/v2/auth/login_uid",
+    "title": "uid登录",
+    "description": "<p><code>Content-Type=&quot;application/json&quot;</code></p>",
+    "name": "authByUid",
+    "group": "AuthV2",
+    "version": "1.2.0",
+    "contentType": "application/json",
+    "parameter": {
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n type:\"wechat/qq/weibo\",\n wechat/qq/weibo: {具体内容,其中必须存在uid}\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "errcode",
+            "defaultValue": "0",
+            "description": "<p>result of operation, 0 when success.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "errcode",
+            "description": "<p>!=0</p>"
+          }
+        ]
+      }
+    },
+    "filename": "src/apis/apiAuthV2.js",
+    "groupTitle": "AuthV2",
+    "sampleRequest": [
+      {
+        "url": "http://api.smartgreenai.com:32363/apis/v2/auth/login_uid"
+      }
+    ]
+  },
+  {
+    "type": "POST",
+    "url": "/apis/v2/auth/bind_phone",
+    "title": "uid绑定手机号",
+    "description": "<p><code>Content-Type=&quot;application/json&quot;</code>，用验证码绑定手机号</p>",
+    "name": "bindPhone",
+    "group": "AuthV2",
+    "version": "1.2.0",
+    "contentType": "application/json",
+    "parameter": {
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n phone:\"13661989491\",\n code: \"1234\",\n type: 'wechat/qq/weibo',\n wechat/qq/weibo\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "errcode",
+            "defaultValue": "0",
+            "description": "<p>result of operation, 0 when success.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "errcode",
+            "defaultValue": "40010",
+            "description": "<p>The <code>id</code> of the User was not found.</p>"
+          }
+        ]
+      }
+    },
+    "filename": "src/apis/apiAuthV2.js",
+    "groupTitle": "AuthV2",
+    "sampleRequest": [
+      {
+        "url": "http://api.smartgreenai.com:32363/apis/v2/auth/bind_phone"
+      }
+    ]
+  },
+  {
+    "type": "POST",
     "url": "/apis/v2/auth/changephone",
     "title": "修改手机号",
     "description": "<p><code>Content-Type=&quot;application/json&quot;</code>，用验证码修改手机</p>",
     "name": "changePhone",
     "group": "AuthV2",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "contentType": "application/json",
     "parameter": {
       "fields": {
@@ -144,7 +249,7 @@
     "description": "<p><code>Content-Type=&quot;application/json&quot;</code></p>",
     "name": "checkLogin",
     "group": "AuthV2",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "contentType": "application/json",
     "success": {
       "fields": {
@@ -182,12 +287,76 @@
   },
   {
     "type": "POST",
+    "url": "/apis/v2/auth/bind_phone/get_sms_code",
+    "title": "uid绑定手机号-获取手机验证码",
+    "description": "<p><code>Content-Type=&quot;application/json&quot;</code></p>",
+    "name": "getSmsCodeBindPhone",
+    "group": "AuthV2",
+    "version": "1.2.0",
+    "contentType": "application/json",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "phone",
+            "defaultValue": "13661989491",
+            "description": "<p>Mandatory phone.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n phone:\"13661989491\",\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "errcode",
+            "defaultValue": "0",
+            "description": "<p>result of operation, 0 when success.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "errcode",
+            "description": "<p>!=0</p>"
+          }
+        ]
+      }
+    },
+    "filename": "src/apis/apiAuthV2.js",
+    "groupTitle": "AuthV2",
+    "sampleRequest": [
+      {
+        "url": "http://api.smartgreenai.com:32363/apis/v2/auth/bind_phone/get_sms_code"
+      }
+    ]
+  },
+  {
+    "type": "POST",
     "url": "/apis/v2/auth/changephone/get_sms_code",
     "title": "修改手机号-获取手机验证码",
     "description": "<p><code>Content-Type=&quot;application/json&quot;</code></p>",
     "name": "getSmsCodeChangePhone",
     "group": "AuthV2",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "contentType": "application/json",
     "parameter": {
       "fields": {
@@ -251,7 +420,7 @@
     "description": "<p><code>Content-Type=&quot;application/json&quot;</code></p>",
     "name": "getSmsCodeRegistOrLogin",
     "group": "AuthV2",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "contentType": "application/json",
     "parameter": {
       "fields": {
@@ -315,7 +484,7 @@
     "description": "<p><code>Content-Type=&quot;application/json&quot;</code> 目前无具体功能</p>",
     "name": "logout",
     "group": "AuthV2",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "contentType": "application/json",
     "success": {
       "fields": {
@@ -358,7 +527,7 @@
     "description": "<p><code>Content-Type=&quot;application/json&quot;</code></p>",
     "name": "refresh",
     "group": "AuthV2",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "contentType": "application/json",
     "success": {
       "fields": {
@@ -401,7 +570,7 @@
     "description": "<p><code>Content-Type=&quot;application/json&quot;</code></p>",
     "name": "registOrLoginSmsCode",
     "group": "AuthV2",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "contentType": "application/json",
     "parameter": {
       "fields": {
@@ -1849,7 +2018,7 @@
     "type": "POST",
     "url": "/apis/v1/crud/user/:_id/targets/remove/:index",
     "title": "用户收藏的目的地删除",
-    "description": "<p><code>Content-Type=&quot;application/json&quot;</code></p>",
+    "description": "<p><code>Content-Type=&quot;application/json&quot;</code>,可以支持<code>GET</code></p>",
     "name": "removeUserTarget_",
     "group": "Crud",
     "version": "1.0.0",
@@ -2320,6 +2489,46 @@
   },
   {
     "type": "POST",
+    "url": "/apis/v1/utils/ios_setting",
+    "title": "IOS的设置",
+    "description": "<p>获取ios的设置,比如wifi-api</p>",
+    "name": "ios",
+    "group": "IOS",
+    "version": "1.0.0",
+    "contentType": "application/json",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "version",
+            "defaultValue": "1.2.5",
+            "description": "<p>当前正在审核的ios-app版本</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n wifi1,\n wifi2\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "src/apis/apiUtils.js",
+    "groupTitle": "IOS",
+    "sampleRequest": [
+      {
+        "url": "http://api.smartgreenai.com:32363/apis/v1/utils/ios_setting"
+      }
+    ]
+  },
+  {
+    "type": "POST",
     "url": "/apis/v1/rest/:model",
     "title": "创建一条记录",
     "description": "<p>model:<code>user,company,vehicle,device</code></p>",
@@ -2762,6 +2971,136 @@
   },
   {
     "type": "POST",
+    "url": "/apis/v2/utils/binding",
+    "title": "设备绑定",
+    "description": "<p><code>Content-Type=&quot;application/json&quot;</code>,如果设备已经绑定到其他人,则直接改绑.</p>",
+    "name": "binding",
+    "group": "UtilsV2",
+    "version": "1.2.0",
+    "contentType": "application/json",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "_id",
+            "defaultValue": "123456789012345",
+            "description": "<p>Mandatory 设备序列号，即device表主键.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "json",
+            "optional": false,
+            "field": "vehicle",
+            "defaultValue": "{_id:\"京A12345\",type,desc:{power,weightTotal,weightSchedule,length,width,height,axleCount}}",
+            "description": "<p>Mandatory 车牌号，vehicle表主键.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "user",
+            "defaultValue": "5b210fea77c0a27c84c0ea23",
+            "description": "<p>Mandatory 绑定的用户_id，user表主键.可从Authorization中获得，binding_noauth接口需要此字段</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n _id:\"123456789012345\",\n vehicle:{\n   _id:\"京A12345\",\n   type:\"车辆类型：小客车，大客车，化危车辆\",\n   desc: {\n     power, //动力类型\n     weightTotal, // 总重量\n     weightSchedule, //额定重量\n     length, //车长度\n     width, //车宽度\n     height, //车高度\n     axleCount //车轴数量\n   }\n }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "errcode",
+            "defaultValue": "0",
+            "description": "<p>result of operation, 0 when success.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "errcode",
+            "description": "<p>!=0</p>"
+          }
+        ]
+      }
+    },
+    "filename": "src/apis/apiUtilsV2.js",
+    "groupTitle": "UtilsV2",
+    "sampleRequest": [
+      {
+        "url": "http://api.smartgreenai.com:32363/apis/v2/utils/binding"
+      }
+    ]
+  },
+  {
+    "type": "GET",
+    "url": "/apis/v2/utils/mydevice",
+    "title": "设备绑定列表",
+    "description": "<p><code>Content-Type=&quot;application/json&quot;</code> 我的设备列表，需要登录,包含了车辆信息,公司信息</p>",
+    "name": "mydevice",
+    "group": "UtilsV2",
+    "version": "1.2.0",
+    "contentType": "application/json",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "errcode",
+            "defaultValue": "0",
+            "description": "<p>result of operation, 0 when success.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n _id,\n desc,\n status,\n company: [{\n   _id,\n   status,\n   desc\n }],\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "errcode",
+            "description": "<p>!=0</p>"
+          }
+        ]
+      }
+    },
+    "filename": "src/apis/apiUtilsV2.js",
+    "groupTitle": "UtilsV2",
+    "sampleRequest": [
+      {
+        "url": "http://api.smartgreenai.com:32363/apis/v2/utils/mydevice"
+      }
+    ]
+  },
+  {
+    "type": "POST",
     "url": "/apis/v1/utils/send_alarm",
     "title": "发送紧急短信",
     "description": "<p><code>Content-Type=&quot;application/json&quot;</code>, 无需认证版本<code>/apis/v1/utils/send_alarm_noauth</code>，需在request-body中加用户<code>_id</code></p>",
@@ -2940,7 +3279,7 @@
     "type": "POST",
     "url": "/apis/v1/utils/bindingV2",
     "title": "设备绑定V2",
-    "description": "<p><code>Content-Type=&quot;application/json&quot;</code></p>",
+    "description": "<p><code>Content-Type=&quot;application/json&quot;</code>,如果设备已经绑定到其他人,则直接改绑.</p>",
     "name": "bindingV2",
     "group": "Utils",
     "version": "1.0.0",
@@ -3037,7 +3376,14 @@
             "description": "<p>result of operation, 0 when success.</p>"
           }
         ]
-      }
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n _id,\n desc,\n status,\n company: [{\n   _id,\n   status,\n   desc\n }],\n}",
+          "type": "json"
+        }
+      ]
     },
     "error": {
       "fields": {
