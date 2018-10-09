@@ -310,7 +310,7 @@
       "examples": [
         {
           "title": "Request-Example:",
-          "content": "{\n phone:\"13661989491\",\n}",
+          "content": "{\n phone:\"13661989491\",\n type: 'wechat/qq/weibo',\n wechat/qq/weibo,\n force: false/true //是否强制绑定,获取验证码,对于同一个手机号,绑定了同一种第三方的,需要提示是否强制绑定.\n}",
           "type": "json"
         }
       ]
