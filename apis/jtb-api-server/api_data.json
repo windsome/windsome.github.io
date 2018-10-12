@@ -728,7 +728,7 @@
   {
     "type": "POST",
     "url": "/apis/v2/auth/unbind_sns",
-    "title": "解绑第三方登录账号",
+    "title": "uid解绑第三方登录账号",
     "description": "<p><code>Content-Type=&quot;application/json&quot;</code>，解绑第三方账号</p>",
     "name": "unbindSns",
     "group": "AuthV2",
