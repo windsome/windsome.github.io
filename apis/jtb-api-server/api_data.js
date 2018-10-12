@@ -587,6 +587,18 @@ define({ "api": [
           {
             "group": "Error 4xx",
             "optional": false,
+            "field": "ERR_USER_AUTH_NO_USER:",
+            "description": "<p>40026,用户授权失败，没有此用户</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "ERR_USER_UPDATE_FAIL:",
+            "description": "<p>40024,用户更新失败</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
             "field": "ERR_INSERT_DB_FAIL:",
             "description": "<p>40005,插入数据错</p>"
           }
@@ -598,76 +610,6 @@ define({ "api": [
     "sampleRequest": [
       {
         "url": "http://api.smartgreenai.com:32363/apis/v2/auth/rebind_sns"
-      }
-    ]
-  },
-  {
-    "type": "POST",
-    "url": "/apis/v2/auth/unbind_sns",
-    "title": "解绑第三方登录账号",
-    "description": "<p><code>Content-Type=&quot;application/json&quot;</code>，解绑第三方账号</p>",
-    "name": "rebindSns",
-    "group": "AuthV2",
-    "version": "1.2.0",
-    "contentType": "application/json",
-    "parameter": {
-      "examples": [
-        {
-          "title": "Request-Example:",
-          "content": "{\n type: 'wechat/qq/weibo',\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "success": {
-      "fields": {
-        "Success 200": [
-          {
-            "group": "Success 200",
-            "type": "Number",
-            "optional": false,
-            "field": "errcode",
-            "defaultValue": "0",
-            "description": "<p>result of operation, 0 when success.</p>"
-          }
-        ]
-      }
-    },
-    "error": {
-      "fields": {
-        "Error 4xx": [
-          {
-            "group": "Error 4xx",
-            "optional": false,
-            "field": "ERR_PARAM_ERROR:",
-            "description": "<p>40003,参数错误</p>"
-          },
-          {
-            "group": "Error 4xx",
-            "optional": false,
-            "field": "ERR_AUTH_ALREADY_EXIST:",
-            "description": "<p>40073,用户已经存在</p>"
-          },
-          {
-            "group": "Error 4xx",
-            "optional": false,
-            "field": "ERR_USER_NOT_LOGIN:",
-            "description": "<p>40029,用户没有登录</p>"
-          },
-          {
-            "group": "Error 4xx",
-            "optional": false,
-            "field": "ERR_INSERT_DB_FAIL:",
-            "description": "<p>40005,插入数据错</p>"
-          }
-        ]
-      }
-    },
-    "filename": "src/apis/apiAuthV2.js",
-    "groupTitle": "AuthV2",
-    "sampleRequest": [
-      {
-        "url": "http://api.smartgreenai.com:32363/apis/v2/auth/unbind_sns"
       }
     ]
   },
@@ -780,6 +722,88 @@ define({ "api": [
     "sampleRequest": [
       {
         "url": "http://api.smartgreenai.com:32363/apis/v2/auth/regist_login"
+      }
+    ]
+  },
+  {
+    "type": "POST",
+    "url": "/apis/v2/auth/unbind_sns",
+    "title": "解绑第三方登录账号",
+    "description": "<p><code>Content-Type=&quot;application/json&quot;</code>，解绑第三方账号</p>",
+    "name": "unbindSns",
+    "group": "AuthV2",
+    "version": "1.2.0",
+    "contentType": "application/json",
+    "parameter": {
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n type: 'wechat/qq/weibo',\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "errcode",
+            "defaultValue": "0",
+            "description": "<p>result of operation, 0 when success.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "ERR_PARAM_ERROR:",
+            "description": "<p>40003,参数错误</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "ERR_AUTH_ALREADY_EXIST:",
+            "description": "<p>40073,用户已经存在</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "ERR_USER_NOT_LOGIN:",
+            "description": "<p>40029,用户没有登录</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "ERR_USER_AUTH_NO_USER:",
+            "description": "<p>40026,用户授权失败，没有此用户</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "ERR_USER_UPDATE_FAIL:",
+            "description": "<p>40024,用户更新失败</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "ERR_INSERT_DB_FAIL:",
+            "description": "<p>40005,插入数据错</p>"
+          }
+        ]
+      }
+    },
+    "filename": "src/apis/apiAuthV2.js",
+    "groupTitle": "AuthV2",
+    "sampleRequest": [
+      {
+        "url": "http://api.smartgreenai.com:32363/apis/v2/auth/unbind_sns"
       }
     ]
   },
