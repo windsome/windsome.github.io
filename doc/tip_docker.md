@@ -2,6 +2,7 @@
 0. 参考
   [大白话Docker入门（一）](https://yq.aliyun.com/articles/63035?spm=a2c4e.11155435.0.0.754cdb563UjTYN)
   [大白话Docker入门（二）](https://yq.aliyun.com/articles/63517?spm=a2c4e.11153940.blogcont63035.15.7c565711cZjyZU)
+  [Docker 常用命令](http://www.cnblogs.com/me115/p/5539047.html)
 1. docker一般维护
   + 安装docker`apt-get install docker.io`
   + 添加当前用户到docker组,避免频繁输入sudo.
@@ -17,6 +18,22 @@
   + `docker ps -a` 查看运行了几个docker container,包含之前运行过的.
   + `docker pull <image-name>` 从docker服务器拉去一个image, 如`docker pull hello-world`
   + `docker run hello-world` 运行某个image
+  + `docker run -d -p 8080:80 hub.c.163.com/library/nginx:latest` 在某个端口运行nginx
+  + 停止、启动、杀死、重启一个容器
+  ```
+    docker stop Name/ID  
+    docker start Name/ID  
+    docker kill Name/ID  
+    docker restart name/ID
+  ```
+2. docker高级维护
+  + `docker attach <id、container_name>`附着到正在运行的容器, id通过`docker ps`获取
+  + `docker exec -t -i <id、container_name> /bin/bash` 进入正在运行的容器内部，同时运行bash(比attach更好用)
+
+3. 设置service允许的端口范围
+    默认范围为`30000~32767`修改`/etc/kubernetes/manifests/kube-apiserver.yaml`,添加 `- --service-node-port-range=79-40000` 这个配置，设定允许的端口
+    `KUBE_SERVICE_ADDRESSES="--service-cluster-ip-range=10.254.0.0/16 --service-node-port-range=79-40000`
+
 2. dockerfile生成image
   + 编辑`dockerfile`,下面是构建nginx的例子
   ```
@@ -421,4 +438,29 @@ as root:
   208  history | grep apt
   209  reboot
   210  history 
+```
+
+### helm的安装
+参考[helm-kubernetes包管理专家](http://www.cnblogs.com/vincenshen/p/8934442.html)
+Helm部署方法二:
+1. 安装Helm Client
+  直接在[Helm Realese](https://github.com/kubernetes/helm/releases)页面下载二进制文件，这里下载的2.8.2版本，解压后将可执行文件helm拷贝到/usr/local/bin目录下即可，这样Helm客户端就在这台机器上安装完成了。
+```
+$ helm version
+Client: &version.Version{SemVer:"v2.8.2", GitCommit:"a80231648a1473929271764b920a8e346f6de844", GitTreeState:"clean"}
+```
+2. 安装Helm Server
+  + 执行命令`helm init`,
+  + 由于 Helm 默认会去gcr.io拉取镜像，所以如果你当前执行的机器没有配置科学上网的话可以实现下面的命令代替：`helm init --upgrade --tiller-image cnych/tiller:v2.8.2`
+  + 创建Tiller ServiceAccount
+```
+kubectl create serviceaccount --namespace kube-system tiller
+kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin --serviceaccount=kube-system:tiller
+kubectl patch deploy --namespace kube-system tiller-deploy -p '{"spec":{"template":{"spec":{"serviceAccount":"tiller"}}}}'
+```
+查看结果:
+```
+$ helm version
+Client: &version.Version{SemVer:"v2.8.2", GitCommit:"a80231648a1473929271764b920a8e346f6de844", GitTreeState:"clean"}
+Server: &version.Version{SemVer:"v2.8.2", GitCommit:"a80231648a1473929271764b920a8e346f6de844", GitTreeState:"clean"}
 ```

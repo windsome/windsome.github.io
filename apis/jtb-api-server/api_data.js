@@ -66,6 +66,107 @@ define({ "api": [
   },
   {
     "type": "POST",
+    "url": "/apis/v2/auth/alipay",
+    "title": "阿里登录",
+    "description": "<p><code>Content-Type=&quot;application/json&quot;</code>，用阿里登录<br/> 见:认证介绍<a href=\"https://docs.open.alipay.com/218/105326/\">https://docs.open.alipay.com/218/105326/</a> <br/> alipay.system.oauth.token(换取授权访问令牌): <a href=\"https://docs.open.alipay.com/api_9/alipay.system.oauth.token\">https://docs.open.alipay.com/api_9/alipay.system.oauth.token</a> <br/> alipay.user.userinfo.share(支付宝钱包用户信息共享):<a href=\"https://docs.open.alipay.com/api_33/alipay.user.userinfo.share/\">https://docs.open.alipay.com/api_33/alipay.user.userinfo.share/</a> <br/></p>",
+    "name": "alipayAuth",
+    "group": "AuthV2",
+    "version": "1.2.0",
+    "contentType": "application/json",
+    "parameter": {
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n userId:\"13661989491\",\n code: \"1234\",\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "errcode",
+            "defaultValue": "0",
+            "description": "<p>result of operation, 0 when success.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "errcode",
+            "defaultValue": "40010",
+            "description": "<p>The <code>id</code> of the User was not found.</p>"
+          }
+        ]
+      }
+    },
+    "filename": "src/apis/apiAuthV2.js",
+    "groupTitle": "AuthV2",
+    "sampleRequest": [
+      {
+        "url": "http://api.smartgreenai.com:32363/apis/v2/auth/alipay"
+      }
+    ]
+  },
+  {
+    "type": "POST",
+    "url": "/apis/v2/auth/alipay/sign",
+    "title": "阿里登录签名",
+    "description": "<p><code>Content-Type=&quot;application/json&quot;</code>，用阿里签名<br/> 见:认证介绍<a href=\"https://docs.open.alipay.com/218/105327\">https://docs.open.alipay.com/218/105327</a> <br/></p>",
+    "name": "alipaySign",
+    "group": "AuthV2",
+    "version": "1.2.0",
+    "contentType": "application/json",
+    "parameter": {
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n //apiname:\"com.alipay.account.auth\",\n //method: \"alipay.open.auth.sdk.code.get\",\n //app_id: ?'2014123100022800',\n //app_name: 'mc',\n //biz_type: 'openservice',\n //pid: ?'2088123456789012'\n //product_id: 'APP_FAST_LOGIN',\n //scope: 'kuaijie',\n //target_id: ?'kkkkk091125',\n //auth_type: 'AUTHACCOUNT',\n //sign_type: 'RSA2'\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n errcode,\n result: 加了sign的一个字符串\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "errcode",
+            "defaultValue": "40010",
+            "description": "<p>The <code>id</code> of the User was not found.</p>"
+          }
+        ]
+      }
+    },
+    "filename": "src/apis/apiAuthV2.js",
+    "groupTitle": "AuthV2",
+    "sampleRequest": [
+      {
+        "url": "http://api.smartgreenai.com:32363/apis/v2/auth/alipay/sign"
+      }
+    ]
+  },
+  {
+    "type": "POST",
     "url": "/apis/v2/auth/login_uid",
     "title": "uid登录",
     "description": "<p><code>Content-Type=&quot;application/json&quot;</code></p>",
