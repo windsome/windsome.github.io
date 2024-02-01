@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Created by CadStd Pro version 3.7.6 see : "http://www.cadstd.com" -->
+<svg version="1.1" baseProfile="full" id="cadstd" preserveAspectRatio="xMidYMid meet" xml:space="preserve" style="overflow:visible" 
+viewBox="0 -81730.77 105769.23 81730.77" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<style type="text/css"><![CDATA[
+text.T1 {
+stroke-linejoin:round;stroke-linecap:round;
+stroke-width:0px;
+font-weight: normal;
+font-style: italic;
+font-size:9.61536in;
+font-family:Sans-Serif;
+text-anchor:start
+}
+text.T2 {
+stroke-linejoin:round;stroke-linecap:round;
+stroke-width:0px;
+font-weight: normal;
+font-style: italic;
+font-size:19.23072in;
+font-family:Sans-Serif;
+text-anchor:start
+}
+text.T3 {
+stroke-linejoin:round;stroke-linecap:round;
+stroke-width:0px;
+font-weight: normal;
+font-style: italic;
+font-size:28.84608in;
+font-family:Sans-Serif;
+text-anchor:start
+}
+text.T4 {
+stroke-linejoin:round;stroke-linecap:round;
+stroke-width:0px;
+font-weight: bold;
+font-style: italic;
+font-size:38.4616in;
+font-family:Sans-Serif;
+text-anchor:start
+}
+text.T5 {
+stroke-linejoin:round;stroke-linecap:round;
+stroke-width:0px;
+font-weight: bold;
+font-style: italic;
+font-size:38.4616in;
+font-family:Sans-Serif;
+text-anchor:start
+}
+*.L0 {
+fill: none;stroke-linejoin:round;stroke-linecap: round;
+stroke-width:86.54;
+}
+*.L1 {
+fill: none;stroke-linejoin:round;stroke-linecap: round;
+stroke-width:230.77;
+}
+*.L2 {
+fill: none;stroke-linejoin:round;stroke-linecap: round;
+stroke-width:86.54;
+}
+*.L3 {
+fill: none;stroke-linejoin:round;stroke-linecap: round;
+stroke-width:86.54;
+stroke-dasharray:
+1201.92,300.48;
+}
+*.L4 {
+fill: none;stroke-linejoin:round;stroke-linecap: round;
+stroke-width:86.54;
+stroke-dasharray:
+7211.54,600.96,1201.92,600.96;
+}
+*.L5 {
+fill: none;stroke-linejoin:round;stroke-linecap: round;
+stroke-width:230.77;
+stroke-dasharray:
+2403.85,600.96;
+}
+*.L6 {
+fill: none;stroke-linejoin:round;stroke-linecap: round;
+stroke-width:230.77;
+stroke-dasharray:
+7211.54,600.96,1201.92,600.96,1201.93,600.96;
+}
+*.L7 {
+fill: none;stroke-linejoin:round;stroke-linecap: round;
+stroke-width:86.54;
+stroke-dasharray:
+7211.54,600.96,1201.92,600.96,1201.93,600.96;
+}
+*.L8 {
+fill: none;stroke-linejoin:round;stroke-linecap: round;
+stroke-width:86.54;
+stroke-dasharray:
+600.96,600.96;
+}
+*.L9 {
+fill: none;stroke-linejoin:round;stroke-linecap: round;
+stroke-width:86.54;
+stroke-dasharray:
+0.01,600.95;
+}
+*.L10 {
+fill: none;stroke-linejoin:round;stroke-linecap: round;
+stroke-width:230.77;
+stroke-dasharray:
+3605.77,600.96,600.96,600.96;
+}
+*.L11 {
+fill: none;stroke-linejoin:round;stroke-linecap: round;
+stroke-width:0;
+}
+   *.Lay0 { stroke:Black }
+line.Lay0, text.Lay0 { stroke:Black; fill:Black }
+   *.Lay1 { stroke:Yellow }
+line.Lay1, text.Lay1 { stroke:Yellow; fill:Yellow }
+   *.Lay2 { stroke:Aqua }
+line.Lay2, text.Lay2 { stroke:Aqua; fill:Aqua }
+   *.Lay3 { stroke:Lime }
+line.Lay3, text.Lay3 { stroke:Lime; fill:Lime }
+   *.Lay4 { stroke:Gray }
+line.Lay4, text.Lay4 { stroke:Gray; fill:Gray }
+   *.Lay5 { stroke:Blue }
+line.Lay5, text.Lay5 { stroke:Blue; fill:Blue }
+   *.Lay6 { stroke:Fuchsia }
+line.Lay6, text.Lay6 { stroke:Fuchsia; fill:Fuchsia }
+   *.Lay7 { stroke:Red }
+line.Lay7, text.Lay7 { stroke:Red; fill:Red }
+   *.Lay8 { stroke:Gold }
+line.Lay8, text.Lay8 { stroke:Gold; fill:Gold }
+   *.Lay9 { stroke:Orange }
+line.Lay9, text.Lay9 { stroke:Orange; fill:Orange }
+   *.Lay10 { stroke:Teal }
+line.Lay10, text.Lay10 { stroke:Teal; fill:Teal }
+   *.Lay11 { stroke:Green }
+line.Lay11, text.Lay11 { stroke:Green; fill:Green }
+   *.Lay12 { stroke:Silver }
+line.Lay12, text.Lay12 { stroke:Silver; fill:Silver }
+   *.Lay13 { stroke:Navy }
+line.Lay13, text.Lay13 { stroke:Navy; fill:Navy }
+   *.Lay14 { stroke:Purple }
+line.Lay14, text.Lay14 { stroke:Purple; fill:Purple }
+   *.Lay15 { stroke:Sienna }
+line.Lay15, text.Lay15 { stroke:Sienna; fill:Sienna }
+]]>
+</style>
+</defs>
+<g transform="scale(1.0),translate(0,0)">
+<polyline class="Lay0 L1" points=" 71200,-24800 85600,-24800 85600,-48800"/>
+<line class="Lay0 L1" x1="24800" y1="-41000" x2="24800" y2="-37400"/>
+<line class="Lay0 L1" x1="24400" y1="-41000" x2="24400" y2="-37400"/>
+<line class="Lay0 L1" x1="37400" y1="-51600" x2="35000" y2="-51600"/>
+<line class="Lay0 L1" x1="29400" y1="-33400" x2="31800" y2="-33400"/>
+<line class="Lay0 L1" x1="44200" y1="-37000" x2="44200" y2="-25200"/>
+<line class="Lay0 L1" x1="44600" y1="-25200" x2="44600" y2="-37400"/>
+<line class="Lay0 L1" x1="76200" y1="-55600" x2="76200" y2="-49200"/>
+<line class="Lay0 L1" x1="75800" y1="-55600" x2="75800" y2="-49200"/>
+<line class="Lay0 L1" x1="85200" y1="-49200" x2="85200" y2="-55600"/>
+<line class="Lay0 L1" x1="76200" y1="-55600" x2="85200" y2="-55600"/>
+<line class="Lay0 L1" x1="85200" y1="-49200" x2="76200" y2="-49200"/>
+<line class="Lay0 L1" x1="43800" y1="-41400" x2="43800" y2="-55600"/>
+<line class="Lay0 L1" x1="35000" y1="-41400" x2="37400" y2="-41400"/>
+<line class="Lay0 L1" x1="18800" y1="-41000" x2="18800" y2="-37400"/>
+<line class="Lay0 L1" x1="18800" y1="-25200" x2="18800" y2="-37000"/>
+<line class="Lay0 L1" x1="18800" y1="-41400" x2="18800" y2="-55600"/>
+<line class="Lay0 L1" x1="29000" y1="-33800" x2="31800" y2="-33800"/>
+<line class="Lay0 L1" x1="37400" y1="-52000" x2="34600" y2="-52000"/>
+<line class="Lay0 L1" x1="37400" y1="-51600" x2="37400" y2="-41400"/>
+<line class="Lay0 L1" x1="75800" y1="-55600" x2="44200" y2="-55600"/>
+<line class="Lay0 L1" x1="37800" y1="-55600" x2="43800" y2="-55600"/>
+<line class="Lay0 L1" x1="37400" y1="-55600" x2="18800" y2="-55600"/>
+<line class="Lay0 L1" x1="18800" y1="-41000" x2="24400" y2="-41000"/>
+<line class="Lay0 L1" x1="27200" y1="-37400" x2="24800" y2="-37400"/>
+<line class="Lay0 L1" x1="27200" y1="-41000" x2="24800" y2="-41000"/>
+<line class="Lay0 L1" x1="32200" y1="-25200" x2="44200" y2="-25200"/>
+<line class="Lay0 L1" x1="45000" y1="-25200" x2="45000" y2="-24800"/>
+<line class="Lay0 L1" x1="48600" y1="-25200" x2="48600" y2="-24800"/>
+<line class="Lay0 L1" x1="71200" y1="-24800" x2="71200" y2="-48800"/>
+<line class="Lay0 L1" x1="85600" y1="-48800" x2="85600" y2="-56000"/>
+<line class="Lay0 L1" x1="85600" y1="-56000" x2="18400" y2="-56000"/>
+<line class="Lay0 L1" x1="18400" y1="-56000" x2="18400" y2="-24800"/>
+<line class="Lay0 L1" x1="70800" y1="-25200" x2="48600" y2="-25200"/>
+<line class="Lay0 L1" x1="71200" y1="-24800" x2="48600" y2="-24800"/>
+<line class="Lay0 L1" x1="45000" y1="-25200" x2="44600" y2="-25200"/>
+<line class="Lay0 L1" x1="45000" y1="-24800" x2="18400" y2="-24800"/>
+<line class="Lay0 L2" x1="44800" y1="-24800" x2="44800" y2="-24600"/>
+<line class="Lay0 L2" x1="44800" y1="-24600" x2="48800" y2="-24600"/>
+<line class="Lay0 L2" x1="48800" y1="-24600" x2="48800" y2="-24800"/>
+<polyline class="Lay0 L2" points=" 45141.42,-25058.58 47687.01,-27604.16 47545.58,-27745.58 45000,-25200 45141.42,-25058.58"/>
+<path class="Lay0 L2" d="M 48607.7287271953,-25193.97 A 3614.9687271953,3614.9687271953 0 0,0 47687.01,-27604.16"/>
+<line class="Lay0 L1" x1="44200" y1="-41400" x2="44200" y2="-55600"/>
+<line class="Lay0 L1" x1="70800" y1="-41000" x2="70800" y2="-25200"/>
+<line class="Lay0 L1" x1="70800" y1="-49200" x2="70800" y2="-41400"/>
+<line class="Lay0 L1" x1="48200" y1="-41400" x2="48200" y2="-41000"/>
+<line class="Lay0 L1" x1="53000" y1="-41400" x2="53000" y2="-41000"/>
+<line class="Lay0 L1" x1="70800" y1="-41400" x2="53000" y2="-41400"/>
+<line class="Lay0 L1" x1="70800" y1="-41000" x2="53000" y2="-41000"/>
+<line class="Lay0 L1" x1="48200" y1="-41400" x2="44200" y2="-41400"/>
+<line class="Lay0 L1" x1="48200" y1="-41000" x2="44200" y2="-41000"/>
+<line class="Lay0 L1" x1="34600" y1="-49400" x2="35000" y2="-49400"/>
+<line class="Lay0 L1" x1="34600" y1="-43400" x2="35000" y2="-43400"/>
+<line class="Lay0 L1" x1="35000" y1="-49400" x2="35000" y2="-51600"/>
+<line class="Lay0 L1" x1="34600" y1="-49400" x2="34600" y2="-52000"/>
+<line class="Lay0 L1" x1="34600" y1="-41400" x2="34600" y2="-43400"/>
+<line class="Lay0 L1" x1="35000" y1="-41400" x2="35000" y2="-43400"/>
+<polyline class="Lay0 L2" points=" 34600,-49400 33539.34,-48339.34 33680.76,-48197.92 34741.42,-49258.58 34600,-49400"/>
+<polyline class="Lay0 L2" points=" 33539.34,-48056.5 34600,-46995.84 34741.42,-47137.26 33680.76,-48197.92 33539.34,-48056.5"/>
+<polyline class="Lay0 L2" points=" 34600,-45804.16 33539.34,-44743.5 33680.76,-44602.08 34741.42,-45662.74 34600,-45804.16"/>
+<polyline class="Lay0 L2" points=" 33539.34,-44460.66 34600,-43400 34741.42,-43541.42 33680.76,-44602.08 33539.34,-44460.66"/>
+<line class="Lay0 L1" x1="31800" y1="-26300" x2="32200" y2="-26300"/>
+<line class="Lay0 L1" x1="31800" y1="-32300" x2="32200" y2="-32300"/>
+<polyline class="Lay0 L2" points=" 32200,-32300 33260.66,-31239.34 33119.24,-31097.92 32058.58,-32158.58 32200,-32300"/>
+<polyline class="Lay0 L2" points=" 33260.66,-30956.5 32200,-29895.84 32058.58,-30037.26 33119.24,-31097.92 33260.66,-30956.5"/>
+<polyline class="Lay0 L2" points=" 32200,-28704.16 33260.66,-27643.5 33119.24,-27502.08 32058.58,-28562.74 32200,-28704.16"/>
+<polyline class="Lay0 L2" points=" 33260.66,-27360.66 32200,-26300 32058.58,-26441.42 33119.24,-27502.08 33260.66,-27360.66"/>
+<line class="Lay0 L1" x1="31400" y1="-37400" x2="31400" y2="-37000"/>
+<line class="Lay0 L1" x1="28400" y1="-37400" x2="28400" y2="-37000"/>
+<line class="Lay0 L1" x1="28400" y1="-37400" x2="27600" y2="-37400"/>
+<line class="Lay0 L1" x1="31800" y1="-37000" x2="31400" y2="-37000"/>
+<line class="Lay0 L1" x1="32600" y1="-37000" x2="32600" y2="-37400"/>
+<line class="Lay0 L1" x1="35625.73" y1="-37000" x2="35625.73" y2="-37400"/>
+<line class="Lay0 L1" x1="35625.73" y1="-37000" x2="44200" y2="-37000"/>
+<line class="Lay0 L1" x1="35625.73" y1="-37400" x2="44600" y2="-37400"/>
+<line class="Lay0 L1" x1="32200" y1="-37000" x2="32600" y2="-37000"/>
+<line class="Lay0 L1" x1="31400" y1="-37400" x2="32600" y2="-37400"/>
+<line class="Lay0 L1" x1="27200" y1="-38000" x2="27600" y2="-38000"/>
+<line class="Lay0 L1" x1="27200" y1="-40400" x2="27600" y2="-40400"/>
+<line class="Lay0 L1" x1="27600" y1="-40400" x2="27600" y2="-41000"/>
+<line class="Lay0 L1" x1="27200" y1="-40400" x2="27200" y2="-41000"/>
+<line class="Lay0 L1" x1="27600" y1="-37400" x2="27600" y2="-38000"/>
+<line class="Lay0 L1" x1="27200" y1="-37400" x2="27200" y2="-38000"/>
+<polyline class="Lay0 L2" points=" 37800,-55200 37658.58,-55058.58 39355.63,-53361.52 39497.06,-53502.94 37800,-55200"/>
+<path class="Lay0 L2" d="M 37800,-52791.6824529768 A 2408.31754702323,2408.31754702323 0 0,0 39355.63,-53361.52"/>
+<line class="Lay0 L1" x1="19200" y1="-37400" x2="19200" y2="-37000"/>
+<line class="Lay0 L1" x1="24000" y1="-37400" x2="24000" y2="-37000"/>
+<line class="Lay0 L1" x1="24400" y1="-37400" x2="24000" y2="-37400"/>
+<line class="Lay0 L1" x1="28400" y1="-37000" x2="24000" y2="-37000"/>
+<line class="Lay0 L1" x1="19200" y1="-37000" x2="18800" y2="-37000"/>
+<line class="Lay0 L1" x1="19200" y1="-37400" x2="18800" y2="-37400"/>
+<polyline class="Lay0 L2" points=" 19200,-37000 20048.53,-36151.47 20189.95,-36292.89 19341.42,-37141.42 19200,-37000"/>
+<polyline class="Lay0 L2" points=" 20189.95,-36292.89 20331.37,-36151.47 21179.9,-37000 21038.48,-37141.42 20189.95,-36292.89"/>
+<polyline class="Lay0 L2" points=" 22020.1,-37000 22868.63,-36151.47 23010.05,-36292.89 22161.52,-37141.42 22020.1,-37000"/>
+<polyline class="Lay0 L2" points=" 23010.05,-36292.89 23151.47,-36151.47 24000,-37000 23858.58,-37141.42 23010.05,-36292.89"/>
+<polyline class="Lay0 L2" points=" 31258.58,-37141.42 29137.26,-35020.1 29278.68,-34878.68 31400,-37000 31258.58,-37141.42"/>
+<path class="Lay0 L2" d="M 28393.3413366995,-37000 A 3006.65866330051,3006.65866330051 0 0,0 29137.26,-35020.1"/>
+<polyline class="Lay0 L2" points=" 32699.56,-37141.42 34820.88,-35020.1 34679.46,-34878.68 32558.14,-37000 32699.56,-37141.42"/>
+<path class="Lay0 L2" d="M 34820.88,-35020.1 A 3006.65866330051,3006.65866330051 0 0,0 35564.7986633005,-37000"/>
+<polyline class="Lay0 L1" points=" 84753.93,-25157.34 85208.86,-25157.34 85208.86,-25598.06 84753.93,-25598.06 84753.93,-25157.34"/>
+<polyline class="Lay0 L1" points=" 84753.93,-37157.34 85208.86,-37157.34 85208.86,-37598.06 84753.93,-37598.06 84753.93,-37157.34"/>
+<line class="Lay0 L1" x1="43800" y1="-50000" x2="37800" y2="-50000"/>
+<line class="Lay0 L1" x1="43800" y1="-49614.36" x2="37800" y2="-49614.36"/>
+<line class="Lay0 L1" x1="31800" y1="-25200" x2="31800" y2="-26300"/>
+<line class="Lay0 L1" x1="32200" y1="-26300" x2="32200" y2="-25200"/>
+<line class="Lay0 L1" x1="32200" y1="-37000" x2="32200" y2="-32300"/>
+<line class="Lay0 L1" x1="29000" y1="-33800" x2="29000" y2="-25200"/>
+<line class="Lay0 L1" x1="29400" y1="-33400" x2="29400" y2="-25200"/>
+<line class="Lay0 L1" x1="31800" y1="-25200" x2="29400" y2="-25200"/>
+<line class="Lay0 L1" x1="29000" y1="-25200" x2="18800" y2="-25200"/>
+<line class="Lay0 L1" x1="31800" y1="-37000" x2="31800" y2="-33800"/>
+<line class="Lay0 L1" x1="31800" y1="-33400" x2="31800" y2="-32300"/>
+<polyline class="Lay0 L2" points=" 34058.58,-41258.58 31937.26,-43379.9 32078.68,-43521.32 34200,-41400 34058.58,-41258.58"/>
+<path class="Lay0 L2" d="M 31937.26,-43379.9 A 3006.65866330051,3006.65866330051 0 0,0 31193.3413366995,-41400"/>
+<line class="Lay0 L1" x1="34200" y1="-41400" x2="34200" y2="-41000"/>
+<line class="Lay0 L1" x1="34600" y1="-41400" x2="34200" y2="-41400"/>
+<line class="Lay0 L1" x1="31200" y1="-41400" x2="31200" y2="-41000"/>
+<line class="Lay0 L1" x1="31200" y1="-41400" x2="18800" y2="-41400"/>
+<line class="Lay0 L1" x1="31200" y1="-41000" x2="27600" y2="-41000"/>
+<polyline class="Lay0 L2" points=" 38200,-41400 38341.42,-41258.58 40038.48,-42955.63 39897.06,-43097.06 38200,-41400"/>
+<path class="Lay0 L2" d="M 40608.3175470232,-41400 A 2408.31754702323,2408.31754702323 0 0,0 40038.48,-42955.63"/>
+<line class="Lay0 L1" x1="38200" y1="-41400" x2="38200" y2="-41000"/>
+<line class="Lay0 L1" x1="40600" y1="-41400" x2="40600" y2="-41000"/>
+<line class="Lay0 L1" x1="40600" y1="-41400" x2="43800" y2="-41400"/>
+<line class="Lay0 L1" x1="40600" y1="-41000" x2="44200" y2="-41000"/>
+<line class="Lay0 L1" x1="34200" y1="-41000" x2="38200" y2="-41000"/>
+<line class="Lay0 L1" x1="37800" y1="-41400" x2="38200" y2="-41400"/>
+<line class="Lay0 L1" x1="37800" y1="-49614.36" x2="37800" y2="-41400"/>
+<line class="Lay0 L2" x1="18800" y1="-39800" x2="24400" y2="-39800"/>
+<line class="Lay0 L2" x1="30600" y1="-33400" x2="30600" y2="-25200"/>
+<line class="Lay0 L2" x1="26000" y1="-41000" x2="26000" y2="-37400"/>
+<line class="Lay0 L2" x1="36200" y1="-51600" x2="36200" y2="-41400"/>
+<line class="Lay0 L1" x1="37800" y1="-55200" x2="37400" y2="-55200"/>
+<line class="Lay0 L1" x1="37800" y1="-52800" x2="37400" y2="-52800"/>
+<line class="Lay0 L1" x1="37400" y1="-55200" x2="37400" y2="-55600"/>
+<line class="Lay0 L1" x1="37800" y1="-55200" x2="37800" y2="-55600"/>
+<line class="Lay0 L1" x1="37400" y1="-52000" x2="37400" y2="-52800"/>
+<line class="Lay0 L1" x1="37800" y1="-50000" x2="37800" y2="-52800"/>
+<polyline class="Lay0 L2" points=" 38000,-49400 43600,-49400 43600,-46600 38000,-46600 38000,-49400"/>
+<path class="Lay0 L2" d="M 42800,-46800 A 600,600 0 0,0 43400,-47400"/>
+<path class="Lay0 L2" d="M 43400,-48600 A 600,600 0 0,0 42800,-49200"/>
+<path class="Lay0 L2" d="M 38200,-47400 A 600,600 0 0,0 38800,-46800"/>
+<path class="Lay0 L2" d="M 38800,-49200 A 600,600 0 0,0 38200,-48600"/>
+<line class="Lay0 L2" x1="38800" y1="-46800" x2="42800" y2="-46800"/>
+<line class="Lay0 L2" x1="43400" y1="-47400" x2="43400" y2="-48600"/>
+<line class="Lay0 L2" x1="42800" y1="-49200" x2="38800" y2="-49200"/>
+<line class="Lay0 L2" x1="38200" y1="-48600" x2="38200" y2="-47400"/>
+<path class="Lay0 L2" d="M 42164.59,-45902.08 A 1409.72384975113,1409.72384975113 0 0,0 42800,-45800"/>
+<path class="Lay0 L2" d="M 42800,-44600 A 1409.72384975113,1409.72384975113 0 0,0 42164.59,-44497.92"/>
+<path class="Lay0 L2" d="M 42164.59,-45902.08 A 791.101886295312,791.101886295312 0 1,0 42164.59,-44497.92"/>
+<path class="Lay0 L2" d="M 43400,-44200 A 200,200 0 0,0 43600,-44400"/>
+<line class="Lay0 L2" x1="43000" y1="-44200" x2="43400" y2="-44200"/>
+<path class="Lay0 L2" d="M 43600,-46000 A 200,200 0 0,0 43400,-46200"/>
+<line class="Lay0 L2" x1="43600" y1="-44400" x2="43600" y2="-46000"/>
+<path class="Lay0 L2" d="M 43000,-46200 A 200,200 0 0,0 42800,-46000"/>
+<line class="Lay0 L2" x1="43400" y1="-46200" x2="43000" y2="-46200"/>
+<path class="Lay0 L2" d="M 42800,-44400 A 200,200 0 0,0 43000,-44200"/>
+<line class="Lay0 L2" x1="42800" y1="-46000" x2="42800" y2="-44400"/>
+<path class="Lay0 L2" d="M 41800,-43800 A 200,200 0 0,0 41600,-43600"/>
+<path class="Lay0 L2" d="M 41600,-41800 A 200,200 0 0,0 41800,-41600"/>
+<line class="Lay0 L2" x1="41600" y1="-43600" x2="41600" y2="-41800"/>
+<line class="Lay0 L2" x1="43600" y1="-43800" x2="43600" y2="-41600"/>
+<line class="Lay0 L2" x1="41800" y1="-43800" x2="43600" y2="-43800"/>
+<line class="Lay0 L2" x1="43600" y1="-41600" x2="41800" y2="-41600"/>
+<path class="Lay0 L2" d="M 43000,-41800 A 200,200 0 0,0 43200,-42000"/>
+<line class="Lay0 L2" x1="42000" y1="-41800" x2="43000" y2="-41800"/>
+<path class="Lay0 L2" d="M 43200,-43400 A 200,200 0 0,0 43000,-43600"/>
+<path class="Lay0 L2" d="M 42000,-43600 A 200,200 0 0,0 41800,-43400"/>
+<line class="Lay0 L2" x1="43000" y1="-43600" x2="42000" y2="-43600"/>
+<path class="Lay0 L2" d="M 41800,-42000 A 200,200 0 0,0 42000,-41800"/>
+<line class="Lay0 L2" x1="41800" y1="-43400" x2="41800" y2="-42000"/>
+<circle class="Lay0 L2" cx="42500" cy="-42700" r="79.89"/>
+<line class="Lay0 L2" x1="43400" y1="-42900" x2="43400" y2="-42500"/>
+<line class="Lay0 L2" x1="43400" y1="-42500" x2="42900" y2="-42600"/>
+<line class="Lay0 L2" x1="42900" y1="-42600" x2="42900" y2="-42800"/>
+<line class="Lay0 L2" x1="42900" y1="-42800" x2="43400" y2="-42900"/>
+<line class="Lay0 L2" x1="43200" y1="-43400" x2="43200" y2="-42860"/>
+<line class="Lay0 L2" x1="43200" y1="-42540" x2="43200" y2="-42000"/>
+<path class="Lay0 L2" d="M 42164.59,-54502.08 A 1409.72384975113,1409.72384975113 0 0,0 42800,-54400"/>
+<path class="Lay0 L2" d="M 42800,-53200 A 1409.72384975113,1409.72384975113 0 0,0 42164.59,-53097.92"/>
+<path class="Lay0 L2" d="M 42164.59,-54502.08 A 791.101886295312,791.101886295312 0 1,0 42164.59,-53097.92"/>
+<path class="Lay0 L2" d="M 43400,-52800 A 200,200 0 0,0 43600,-53000"/>
+<line class="Lay0 L2" x1="43000" y1="-52800" x2="43400" y2="-52800"/>
+<path class="Lay0 L2" d="M 43600,-54600 A 200,200 0 0,0 43400,-54800"/>
+<line class="Lay0 L2" x1="43600" y1="-53000" x2="43600" y2="-54600"/>
+<path class="Lay0 L2" d="M 43000,-54800 A 200,200 0 0,0 42800,-54600"/>
+<line class="Lay0 L2" x1="43400" y1="-54800" x2="43000" y2="-54800"/>
+<path class="Lay0 L2" d="M 42800,-53000 A 200,200 0 0,0 43000,-52800"/>
+<line class="Lay0 L2" x1="42800" y1="-54600" x2="42800" y2="-53000"/>
+<path class="Lay0 L2" d="M 41800,-52400 A 200,200 0 0,0 41600,-52200"/>
+<path class="Lay0 L2" d="M 41600,-50400 A 200,200 0 0,0 41800,-50200"/>
+<line class="Lay0 L2" x1="41600" y1="-52200" x2="41600" y2="-50400"/>
+<line class="Lay0 L2" x1="43600" y1="-52400" x2="43600" y2="-50200"/>
+<line class="Lay0 L2" x1="41800" y1="-52400" x2="43600" y2="-52400"/>
+<line class="Lay0 L2" x1="43600" y1="-50200" x2="41800" y2="-50200"/>
+<path class="Lay0 L2" d="M 43000,-50400 A 200,200 0 0,0 43200,-50600"/>
+<line class="Lay0 L2" x1="42000" y1="-50400" x2="43000" y2="-50400"/>
+<path class="Lay0 L2" d="M 43200,-52000 A 200,200 0 0,0 43000,-52200"/>
+<path class="Lay0 L2" d="M 42000,-52200 A 200,200 0 0,0 41800,-52000"/>
+<line class="Lay0 L2" x1="43000" y1="-52200" x2="42000" y2="-52200"/>
+<path class="Lay0 L2" d="M 41800,-50600 A 200,200 0 0,0 42000,-50400"/>
+<line class="Lay0 L2" x1="41800" y1="-52000" x2="41800" y2="-50600"/>
+<circle class="Lay0 L2" cx="42500" cy="-51300" r="79.89"/>
+<line class="Lay0 L2" x1="43400" y1="-51500" x2="43400" y2="-51100"/>
+<line class="Lay0 L2" x1="43400" y1="-51100" x2="42900" y2="-51200"/>
+<line class="Lay0 L2" x1="42900" y1="-51200" x2="42900" y2="-51400"/>
+<line class="Lay0 L2" x1="42900" y1="-51400" x2="43400" y2="-51500"/>
+<line class="Lay0 L2" x1="43200" y1="-52000" x2="43200" y2="-51460"/>
+<line class="Lay0 L2" x1="43200" y1="-51140" x2="43200" y2="-50600"/>
+<line class="Lay0 L2" x1="75400" y1="-48800" x2="75400" y2="-48600"/>
+<line class="Lay0 L2" x1="75400" y1="-48600" x2="71800" y2="-48600"/>
+<line class="Lay0 L2" x1="71800" y1="-48600" x2="71800" y2="-48800"/>
+<line class="Lay0 L1" x1="75200" y1="-49200" x2="75200" y2="-48800"/>
+<line class="Lay0 L1" x1="75200" y1="-49200" x2="75800" y2="-49200"/>
+<line class="Lay0 L1" x1="85600" y1="-48800" x2="75200" y2="-48800"/>
+<path class="Lay0 L2" d="M 72937.26,-51462.74 A 3200,3200 0 0,0 72000,-49200"/>
+<line class="Lay0 L2" x1="75200" y1="-49200" x2="75058.58" y2="-49058.58"/>
+<line class="Lay0 L2" x1="72800.26" y1="-51316.89" x2="75058.58" y2="-49058.58"/>
+<line class="Lay0 L2" x1="72937.26" y1="-51462.74" x2="75200" y2="-49200"/>
+<line class="Lay0 L1" x1="72000" y1="-49200" x2="72000" y2="-48800"/>
+<line class="Lay0 L1" x1="70800" y1="-49200" x2="72000" y2="-49200"/>
+<line class="Lay0 L1" x1="72000" y1="-48800" x2="71200" y2="-48800"/>
+<path class="Lay2 L8" d="M 51800,-30600 A 5827.80650830992,5827.80650830992 0 0,0 50200,-25200"/>
+<path class="Lay2 L8" d="M 55000,-33000.01 A 8732.19260157878,8732.19260157878 0 0,0 51800,-30600"/>
+<path class="Lay2 L8" d="M 65800,-51200 A 4452.56557444133,4452.56557444133 0 0,0 70200,-50799.99"/>
+<circle class="Lay2 L2" cx="56200" cy="-33400" r="400"/>
+<line class="Lay2 L2" x1="56600" y1="-33400" x2="57000" y2="-33400"/>
+<line class="Lay2 L2" x1="56200" y1="-33800" x2="56200" y2="-34200"/>
+<line class="Lay2 L2" x1="55800" y1="-33400" x2="55400" y2="-33400"/>
+<line class="Lay2 L2" x1="56200" y1="-33000" x2="56200" y2="-32600"/>
+<circle class="Lay2 L2" cx="56000" cy="-49800" r="400"/>
+<line class="Lay2 L2" x1="56400" y1="-49800" x2="56800" y2="-49800"/>
+<line class="Lay2 L2" x1="56000" y1="-50200" x2="56000" y2="-50600"/>
+<line class="Lay2 L2" x1="55600" y1="-49800" x2="55200" y2="-49800"/>
+<line class="Lay2 L2" x1="56000" y1="-49400" x2="56000" y2="-49000"/>
+<circle class="Lay2 L2" cx="65200" cy="-51600" r="400"/>
+<line class="Lay2 L2" x1="65600" y1="-51600" x2="66000" y2="-51600"/>
+<line class="Lay2 L2" x1="65200" y1="-52000" x2="65200" y2="-52400"/>
+<line class="Lay2 L2" x1="64800" y1="-51600" x2="64400" y2="-51600"/>
+<line class="Lay2 L2" x1="65200" y1="-51200" x2="65200" y2="-50800"/>
+<circle class="Lay2 L2" cx="26600" cy="-49000" r="400"/>
+<line class="Lay2 L2" x1="27000" y1="-49000" x2="27400" y2="-49000"/>
+<line class="Lay2 L2" x1="26600" y1="-49400" x2="26600" y2="-49800"/>
+<line class="Lay2 L2" x1="26200" y1="-49000" x2="25800" y2="-49000"/>
+<line class="Lay2 L2" x1="26600" y1="-48600" x2="26600" y2="-48200"/>
+<circle class="Lay2 L2" cx="23800" cy="-30800" r="400"/>
+<line class="Lay2 L2" x1="24200" y1="-30800" x2="24600" y2="-30800"/>
+<line class="Lay2 L2" x1="23800" y1="-31200" x2="23800" y2="-31600"/>
+<line class="Lay2 L2" x1="23400" y1="-30800" x2="23000" y2="-30800"/>
+<line class="Lay2 L2" x1="23800" y1="-30400" x2="23800" y2="-30000"/>
+<circle class="Lay2 L2" cx="38165.73" cy="-30800" r="400"/>
+<line class="Lay2 L2" x1="38565.73" y1="-30800" x2="38965.73" y2="-30800"/>
+<line class="Lay2 L2" x1="38165.73" y1="-31200" x2="38165.73" y2="-31600"/>
+<line class="Lay2 L2" x1="37765.73" y1="-30800" x2="37365.73" y2="-30800"/>
+<line class="Lay2 L2" x1="38165.73" y1="-30400" x2="38165.73" y2="-30000"/>
+<circle class="Lay2 L2" cx="5852.78" cy="-71883.81" r="400"/>
+<line class="Lay2 L2" x1="6252.78" y1="-71883.81" x2="6652.78" y2="-71883.81"/>
+<line class="Lay2 L2" x1="5852.78" y1="-72283.81" x2="5852.78" y2="-72683.81"/>
+<line class="Lay2 L2" x1="5452.78" y1="-71883.81" x2="5052.78" y2="-71883.81"/>
+<line class="Lay2 L2" x1="5852.78" y1="-71483.81" x2="5852.78" y2="-71083.81"/>
+<path class="Lay2 L8" d="M 52302.88,-37638.22 A 2632.6689517517,2632.6689517517 0 0,0 55200,-33800"/>
+<path class="Lay2 L8" d="M 55261.33,-45908.91 A 6003.9209384139,6003.9209384139 0 0,0 56000.01,-49000"/>
+<path class="Lay2 L8" d="M 55136.62,-45723.66 A 5309.15449599707,5309.15449599707 0 0,0 54000,-41600"/>
+<path class="Lay2 L8" d="M 60039.35,-44790.45 A 8430.45812820158,8430.45812820158 0 0,0 54000,-41600"/>
+<path class="Lay2 L8" d="M 52458.31,-37851.54 A 4760.07185068342,4760.07185068342 0 0,0 54000,-40800"/>
+<path class="Lay2 L8" d="M 60355.99,-44803.11 A 13559.1743724312,13559.1743724312 0 0,0 66199.65,-46295.03"/>
+<path class="Lay2 L8" d="M 66433.63,-46429.5 A 2906.8900000043,2906.8900000043 0 0,0 65800,-51200"/>
+<circle class="Lay2 L2" cx="36600" cy="-39000" r="400"/>
+<line class="Lay2 L2" x1="37000" y1="-39000" x2="37400" y2="-39000"/>
+<line class="Lay2 L2" x1="36600" y1="-39400" x2="36600" y2="-39800"/>
+<line class="Lay2 L2" x1="36200" y1="-39000" x2="35800" y2="-39000"/>
+<line class="Lay2 L2" x1="36600" y1="-38600" x2="36600" y2="-38200"/>
+<path class="Lay2 L8" d="M 30200,-41400 A 5260.48190123991,5260.48190123991 0 0,0 27200,-48799.99"/>
+<path class="Lay2 L8" d="M 29800,-41000 A 2846.90746725075,2846.90746725075 0 0,0 33600,-38600.01"/>
+<path class="Lay2 L8" d="M 43400,-37400 A 5425.10655087581,5425.10655087581 0 0,0 37400,-39600"/>
+<path class="Lay2 L8" d="M 35252.41,-39031.11 A 5508.33757552522,5508.33757552522 0 0,0 33600,-38600"/>
+<path class="Lay2 L8" d="M 36200,-37000 A 4932.51735420451,4932.51735420451 0 0,0 38200,-31600"/>
+<path class="Lay2 L8" d="M 23800,-31600 A 5295.40987097555,5295.40987097555 0 0,0 28000,-37000"/>
+<circle class="Lay2 L2" cx="39800" cy="-45200" r="400"/>
+<line class="Lay2 L2" x1="40200" y1="-45200" x2="40600" y2="-45200"/>
+<line class="Lay2 L2" x1="39800" y1="-45600" x2="39800" y2="-46000"/>
+<line class="Lay2 L2" x1="39400" y1="-45200" x2="39000" y2="-45200"/>
+<line class="Lay2 L2" x1="39800" y1="-44800" x2="39800" y2="-44400"/>
+<circle class="Lay2 L2" cx="39800" cy="-52400" r="400"/>
+<line class="Lay2 L2" x1="40200" y1="-52400" x2="40600" y2="-52400"/>
+<line class="Lay2 L2" x1="39800" y1="-52800" x2="39800" y2="-53200"/>
+<line class="Lay2 L2" x1="39400" y1="-52400" x2="39000" y2="-52400"/>
+<line class="Lay2 L2" x1="39800" y1="-52000" x2="39800" y2="-51600"/>
+<path class="Lay2 L8" d="M 41200,-41400 A 2984.13720706685,2984.13720706685 0 0,0 39800,-44400.01"/>
+<path class="Lay2 L8" d="M 37800,-52400 A 1576.58738835657,1576.58738835657 0 0,0 39600,-51600"/>
+<path class="Lay2 L8" d="M 71600.01,-49200 A 1188.47857085208,1188.47857085208 0 0,0 70200,-50799.99"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="18400" y1="-56596.15" x2="18400" y2="-65783.68"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="85800" y1="-56596.15" x2="85800" y2="-65783.68"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="48193.16" y1="-64581.76" x2="18400" y2="-64581.76"/>
+<line class="Lay5 L2" x1="19361.54" y1="-65543.3" x2="17438.46" y2="-63620.22"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="55006.84" y1="-64581.76" x2="85800" y2="-64581.76"/>
+<line class="Lay5 L2" x1="84838.46" y1="-63620.22" x2="86761.54" y2="-65543.3"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="48193.16" y1="-64581.76" x2="55006.84" y2="-64581.76"/>
+<text class="Lay5 T2" style="text-anchor:middle"  x="51600" y="-65182.72" transform="rotate(0 51600 -65182.72)"
+>56'-2"</text>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="18400" y1="-56596.15" x2="18400" y2="-61583.68"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="37600" y1="-56596.15" x2="37600" y2="-61583.68"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="25201.63" y1="-60381.76" x2="18400" y2="-60381.76"/>
+<line class="Lay5 L2" x1="19361.54" y1="-61343.3" x2="17438.46" y2="-59420.22"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="29198.37" y1="-60381.76" x2="37600" y2="-60381.76"/>
+<line class="Lay5 L2" x1="36638.46" y1="-59420.22" x2="38561.54" y2="-61343.3"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="25201.63" y1="-60381.76" x2="29198.37" y2="-60381.76"/>
+<text class="Lay5 T2" style="text-anchor:middle"  x="27200" y="-60982.72" transform="rotate(0 27200 -60982.72)"
+>16'</text>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="37600" y1="-56596.15" x2="37600" y2="-61583.68"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="44000" y1="-56596.15" x2="44000" y2="-61583.68"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="40800" y1="-60381.76" x2="37600" y2="-60381.76"/>
+<line class="Lay5 L2" x1="38561.54" y1="-61343.3" x2="36638.46" y2="-59420.22"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="40800" y1="-60381.76" x2="44000" y2="-60381.76"/>
+<line class="Lay5 L2" x1="43038.46" y1="-59420.22" x2="44961.54" y2="-61343.3"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="38390.27" y1="-60381.76" x2="37600" y2="-60381.76"/>
+<text class="Lay5 T2" style="text-anchor:middle"  x="40600" y="-60982.72" transform="rotate(0 40600 -60982.72)"
+>5'-4"</text>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="44000" y1="-56596.15" x2="44000" y2="-61583.68"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="76000" y1="-56596.15" x2="76000" y2="-61583.68"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="57811.97" y1="-60381.76" x2="44000" y2="-60381.76"/>
+<line class="Lay5 L2" x1="44961.54" y1="-61343.3" x2="43038.46" y2="-59420.22"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="64588.03" y1="-60381.76" x2="76000" y2="-60381.76"/>
+<line class="Lay5 L2" x1="75038.46" y1="-59420.22" x2="76961.54" y2="-61343.3"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="57811.97" y1="-60381.76" x2="64588.03" y2="-60381.76"/>
+<text class="Lay5 T2" style="text-anchor:middle"  x="61200" y="-60982.72" transform="rotate(0 61200 -60982.72)"
+>26'-8"</text>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="18400" y1="-24203.85" x2="18400" y2="-11745.74"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="85600" y1="-24203.85" x2="85600" y2="-11745.74"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="48401.63" y1="-12947.66" x2="18400" y2="-12947.66"/>
+<line class="Lay5 L2" x1="19361.54" y1="-13909.2" x2="17438.46" y2="-11986.12"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="52398.37" y1="-12947.66" x2="85600" y2="-12947.66"/>
+<line class="Lay5 L2" x1="84638.46" y1="-11986.12" x2="86561.54" y2="-13909.2"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="48401.63" y1="-12947.66" x2="52398.37" y2="-12947.66"/>
+<text class="Lay5 T2" style="text-anchor:middle"  x="50400" y="-13548.62" transform="rotate(0 50400 -13548.62)"
+>56'</text>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="18400" y1="-24203.85" x2="18400" y2="-15345.74"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="71200" y1="-24203.85" x2="71200" y2="-15345.74"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="40001.63" y1="-16547.66" x2="18400" y2="-16547.66"/>
+<line class="Lay5 L2" x1="19361.54" y1="-17509.2" x2="17438.46" y2="-15586.12"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="43998.37" y1="-16547.66" x2="71200" y2="-16547.66"/>
+<line class="Lay5 L2" x1="70238.46" y1="-15586.12" x2="72161.54" y2="-17509.2"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="40001.63" y1="-16547.66" x2="43998.37" y2="-16547.66"/>
+<text class="Lay5 T2" style="text-anchor:middle"  x="42000" y="-17148.62" transform="rotate(0 42000 -17148.62)"
+>44'</text>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="18400" y1="-24203.85" x2="18400" y2="-18945.74"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="29200" y1="-24203.85" x2="29200" y2="-18945.74"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="22190.09" y1="-20147.66" x2="18400" y2="-20147.66"/>
+<line class="Lay5 L2" x1="19361.54" y1="-21109.2" x2="17438.46" y2="-19186.12"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="25009.91" y1="-20147.66" x2="29200" y2="-20147.66"/>
+<line class="Lay5 L2" x1="28238.46" y1="-19186.12" x2="30161.54" y2="-21109.2"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="22190.09" y1="-20147.66" x2="25009.91" y2="-20147.66"/>
+<text class="Lay5 T2" style="text-anchor:middle"  x="23600" y="-20748.62" transform="rotate(0 23600 -20748.62)"
+>9'</text>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="29200" y1="-24203.85" x2="29200" y2="-16745.74"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="32000" y1="-24203.85" x2="32000" y2="-16745.74"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="30600" y1="-17947.66" x2="29200" y2="-17947.66"/>
+<line class="Lay5 L2" x1="30161.54" y1="-18909.2" x2="28238.46" y2="-16986.12"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="30600" y1="-17947.66" x2="32000" y2="-17947.66"/>
+<line class="Lay5 L2" x1="31038.46" y1="-16986.12" x2="32961.54" y2="-18909.2"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="23588.24" y1="-17947.66" x2="29200" y2="-17947.66"/>
+<text class="Lay5 T2" style="text-anchor:middle"  x="25797.97" y="-18548.62" transform="rotate(0 25797.97 -18548.62)"
+>2'-4"</text>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="32000" y1="-24203.85" x2="32000" y2="-18945.74"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="44400" y1="-24203.85" x2="44400" y2="-18945.74"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="33793.16" y1="-20147.66" x2="32000" y2="-20147.66"/>
+<line class="Lay5 L2" x1="32961.54" y1="-21109.2" x2="31038.46" y2="-19186.12"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="40606.84" y1="-20147.66" x2="44400" y2="-20147.66"/>
+<line class="Lay5 L2" x1="43438.46" y1="-19186.12" x2="45361.54" y2="-21109.2"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="33793.16" y1="-20147.66" x2="40606.84" y2="-20147.66"/>
+<text class="Lay5 T2" style="text-anchor:middle"  x="37200" y="-20748.62" transform="rotate(0 37200 -20748.62)"
+>10'-4"</text>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="44400" y1="-24203.85" x2="44400" y2="-18945.74"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="71200" y1="-24203.85" x2="71200" y2="-18945.74"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="51793.16" y1="-20147.66" x2="44400" y2="-20147.66"/>
+<line class="Lay5 L2" x1="45361.54" y1="-21109.2" x2="43438.46" y2="-19186.12"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="58606.84" y1="-20147.66" x2="71200" y2="-20147.66"/>
+<line class="Lay5 L2" x1="70238.46" y1="-19186.12" x2="72161.54" y2="-21109.2"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="51793.16" y1="-20147.66" x2="58606.84" y2="-20147.66"/>
+<text class="Lay5 T2" style="text-anchor:middle"  x="55200" y="-20748.62" transform="rotate(0 55200 -20748.62)"
+>22'-4"</text>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="17803.85" y1="-24800" x2="6106.25" y2="-24800"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="17803.85" y1="-56000" x2="6106.25" y2="-56000"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="7308.17" y1="-38001.63" x2="7308.17" y2="-24800"/>
+<line class="Lay5 L2" x1="6346.63" y1="-25761.54" x2="8269.71" y2="-23838.46"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="7308.17" y1="-41998.37" x2="7308.17" y2="-56000"/>
+<line class="Lay5 L2" x1="8269.71" y1="-55038.46" x2="6346.63" y2="-56961.54"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="7308.17" y1="-38001.63" x2="7308.17" y2="-41998.37"/>
+<text class="Lay5 T2" style="text-anchor:middle"  x="6707.21" y="-40000" transform="rotate(-90 6707.21 -40000)"
+>26'</text>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="17803.85" y1="-41200" x2="13506.25" y2="-41200"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="17803.85" y1="-56000" x2="13506.25" y2="-56000"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="14708.17" y1="-44793.16" x2="14708.17" y2="-41200"/>
+<line class="Lay5 L2" x1="13746.63" y1="-42161.54" x2="15669.71" y2="-40238.46"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="14708.17" y1="-51606.84" x2="14708.17" y2="-56000"/>
+<line class="Lay5 L2" x1="15669.71" y1="-55038.46" x2="13746.63" y2="-56961.54"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="14708.17" y1="-44793.16" x2="14708.17" y2="-51606.84"/>
+<text class="Lay5 T2" style="text-anchor:middle"  x="14107.21" y="-48200" transform="rotate(-90 14107.21 -48200)"
+>12'-4"</text>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="17803.85" y1="-24800" x2="13506.25" y2="-24800"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="17803.85" y1="-37200" x2="13506.25" y2="-37200"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="14708.17" y1="-27793.16" x2="14708.17" y2="-24800"/>
+<line class="Lay5 L2" x1="13746.63" y1="-25761.54" x2="15669.71" y2="-23838.46"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="14708.17" y1="-34606.84" x2="14708.17" y2="-37200"/>
+<line class="Lay5 L2" x1="15669.71" y1="-36238.46" x2="13746.63" y2="-38161.54"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="14708.17" y1="-27793.16" x2="14708.17" y2="-34606.84"/>
+<text class="Lay5 T2" style="text-anchor:middle"  x="14107.21" y="-31200" transform="rotate(-90 14107.21 -31200)"
+>10'-4"</text>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="86196.15" y1="-24800" x2="94450.51" y2="-24800"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="86196.15" y1="-56000" x2="94450.51" y2="-56000"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="93248.59" y1="-37801.63" x2="93248.59" y2="-24800"/>
+<line class="Lay5 L2" x1="92287.05" y1="-25761.54" x2="94210.13" y2="-23838.46"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="93248.59" y1="-41798.37" x2="93248.59" y2="-56000"/>
+<line class="Lay5 L2" x1="94210.13" y1="-55038.46" x2="92287.05" y2="-56961.54"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="93248.59" y1="-37801.63" x2="93248.59" y2="-41798.37"/>
+<text class="Lay5 T2" style="text-anchor:middle"  x="92647.63" y="-39800" transform="rotate(-90 92647.63 -39800)"
+>26'</text>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="86196.15" y1="-48800" x2="90850.51" y2="-48800"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="86196.15" y1="-56000" x2="90850.51" y2="-56000"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="89648.59" y1="-51002.59" x2="89648.59" y2="-48800"/>
+<line class="Lay5 L2" x1="88687.05" y1="-49761.54" x2="90610.13" y2="-47838.46"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="89648.59" y1="-53797.41" x2="89648.59" y2="-56000"/>
+<line class="Lay5 L2" x1="90610.13" y1="-55038.46" x2="88687.05" y2="-56961.54"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="89648.59" y1="-51002.59" x2="89648.59" y2="-53797.41"/>
+<text class="Lay5 T2" style="text-anchor:middle"  x="89047.63" y="-52400" transform="rotate(-90 89047.63 -52400)"
+>6'</text>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="86196.15" y1="-24800" x2="90850.51" y2="-24800"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="86196.15" y1="-48800" x2="90850.51" y2="-48800"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="89648.59" y1="-36801.63" x2="89648.59" y2="-24800"/>
+<line class="Lay5 L2" x1="88687.05" y1="-25761.54" x2="90610.13" y2="-23838.46"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="89648.59" y1="-40798.37" x2="89648.59" y2="-48800"/>
+<line class="Lay5 L2" x1="90610.13" y1="-47838.46" x2="88687.05" y2="-49761.54"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="89648.59" y1="-36801.63" x2="89648.59" y2="-40798.37"/>
+<text class="Lay5 T2" style="text-anchor:middle"  x="89047.63" y="-38800" transform="rotate(-90 89047.63 -38800)"
+>20'</text>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="17803.85" y1="-37200" x2="9998.08" y2="-37200"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="17803.85" y1="-41200" x2="9998.08" y2="-41200"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="11200" y1="-39200" x2="11200" y2="-37200"/>
+<line class="Lay5 L2" x1="10238.46" y1="-38161.54" x2="12161.54" y2="-36238.46"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="11200" y1="-39200" x2="11200" y2="-41200"/>
+<line class="Lay5 L2" x1="12161.54" y1="-40238.46" x2="10238.46" y2="-42161.54"/>
+<line class="Lay5 L11" style="stroke-width:86.54" x1="11200" y1="-31588.24" x2="11200" y2="-37200"/>
+<text class="Lay5 T2" style="text-anchor:middle"  x="10599.04" y="-33797.97" transform="rotate(-90 10599.04 -33797.97)"
+>3'-4"</text>
+<text class="Lay7 T2" x="23885.47" y="-53294.67" transform="rotate(0 23885.47 -53294.67)"
+>MASTER</text>
+<text class="Lay7 T2" x="23509.45" y="-51661.36" transform="rotate(0 23509.45 -51661.36)"
+>BEDROOM</text>
+<text class="Lay7 T3" x="41527.56" y="-7300.56" transform="rotate(0 41527.56 -7300.56)"
+>FLOOR PLAN</text>
+<text class="Lay7 T2" x="9835.03" y="-75892.01" transform="rotate(0 9835.03 -75892.01)"
+>LEGEND</text>
+<line class="Lay7 L1" x1="7980.38" y1="-75015.96" x2="17503.94" y2="-75015.96"/>
+<text class="Lay7 T1" x="85800" y="-9400" transform="rotate(0 85800 -9400)"
+>ADAPTED FROM LESSON 1 OF</text>
+<text class="Lay7 T1" x="85800" y="-8200" transform="rotate(0 85800 -8200)"
+>HOUSE PLAN DRAFTING 101</text>
+<text class="Lay7 T1" x="85800" y="-7000" transform="rotate(0 85800 -7000)"
+>BY TIM DAVIS</text>
+<text class="Lay7 T1" x="85800" y="-3400" transform="rotate(0 85800 -3400)"
+>SEE : www.homedesign.8m.com</text>
+<text class="Lay7 T1" x="85800" y="-5800" transform="rotate(0 85800 -5800)"
+>DRAWN  BY : JOHN APPERSON</text>
+<text class="Lay7 T1" x="85800" y="-4600" transform="rotate(0 85800 -4600)"
+>USING CADSTD PRO VERSION 2.7</text>
+<text class="Lay7 T2" x="54982.42" y="-27410.52" transform="rotate(0 54982.42 -27410.52)"
+>LIVING ROOM</text>
+<text class="Lay7 T2" x="46446.54" y="-52584.13" transform="rotate(0 46446.54 -52584.13)"
+>DINING</text>
+<text class="Lay7 T2" x="75381.73" y="-32763.53" transform="rotate(0 75381.73 -32763.53)"
+>CARPORT</text>
+<text class="Lay7 T2" x="67010.69" y="-52385.86" transform="rotate(0 67010.69 -52385.86)"
+>KIT</text>
+<text class="Lay7 T2" x="43205.2" y="-5068.61" transform="rotate(0 43205.2 -5068.61)"
+>SCALE 1/8" = 1'</text>
+<line class="Lay7 L1" x1="40400" y1="-6800" x2="61200" y2="-6800"/>
+<line class="Lay7 L1" x1="42600" y1="-4600" x2="60800" y2="-4600"/>
+<text class="Lay7 T2" x="19740.69" y="-27043.42" transform="rotate(0 19740.69 -27043.42)"
+>BEDROOM</text>
+<text class="Lay7 T2" x="34339.51" y="-27233.06" transform="rotate(0 34339.51 -27233.06)"
+>BEDROOM</text>
+<text class="Lay7 T1" x="7600" y="-71400" transform="rotate(0 7600 -71400)"
+>OVERHEAD LIGHT FIXTURE</text>
+</g>
+</svg>
